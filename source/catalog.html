@@ -8,16 +8,22 @@
     <header class="page-header">
       <div class="container">
 
-        <a href="" class="page-header__logo-wrap">
+        <a href="index.html" class="page-header__logo-wrap">
           <img class="page-header__logo" src="img/mobile-logo.svg" width="191" height="39" alt="Cat Energy">
         </a>
 
         <nav class="main-nav">
           <button class="main-nav__toggle" type="button">Открыть меню</button>
           <ul class="main-nav__list">
-            <li class="main-nav__item">Главная</li>
-            <li class="main-nav__item">Каталог продукции</li>
-            <li class="main-nav__item">Подбор программы</li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
           </ul>
         </nav>
 
@@ -26,88 +32,92 @@
 
     <main class="page-main">
 
-      <section class="catalog container">
-        <h2 class="catalog__title">Каталог продукции</h2>
+      <section class="catalog">
+        <div class="container">
 
-        <ul class="catalog__list">
+          <h1 class="catalog__title">Каталог продукции</h1>
 
-          <li class="catalog__item product">
-            <div class="product__wrapper">
-              <a class="product__img-wrap">
-                <img src="img/mobile-product-1.png" class="product__img" src="" width="140" height="144" alt="">
-              </a>
-              <div class="product__description">
-                <h3 class="product__title">Cat Energy Pro 500 Г</h3>
-                <table class="product__properties">
-                  <tr class="product__row">
-                    <th class="product__prop-desc">Объём</th>
-                    <td class="product__prop-value">500 г.</td>
-                  </tr>
-                  <tr class="product__row">
-                    <th class="product__prop-desc">Вкус</th>
-                    <td class="product__prop-value">Курица</td>
-                  </tr>
-                  <tr class="product__row">
-                    <th class="product__prop-desc">Цена</th>
-                    <td class="product__prop-value">1000 Р.</td>
-                  </tr>
-                </table>
+          <ul class="catalog__list">
+
+            <li class="catalog__item product">
+              <div class="product__wrapper">
+                <a class="product__img-wrap">
+                  <img src="img/mobile-product-1.png" class="product__img" src="" width="140" height="144" alt="">
+                </a>
+                <div class="product__description">
+                  <h3 class="product__title">Cat Energy Pro 500 Г</h3>
+                  <table class="product__properties">
+                    <tr class="product__row">
+                      <th class="product__prop-desc">Объём</th>
+                      <td class="product__prop-value">500 г.</td>
+                    </tr>
+                    <tr class="product__row">
+                      <th class="product__prop-desc">Вкус</th>
+                      <td class="product__prop-value">Курица</td>
+                    </tr>
+                    <tr class="product__row">
+                      <th class="product__prop-desc">Цена</th>
+                      <td class="product__prop-value">1000 Р.</td>
+                    </tr>
+                  </table>
+                </div>
               </div>
+              <a href="" class="button product__button">Заказать</a>
+            </li>
+
+          </ul>
+
+          <div class="catalog__see-more see-more">
+            <div class="see-more__img-wrap">
+              <img class="see-more__img" src="img/mobile-plusicon.svg" width="31" height="31">
             </div>
-            <a href="" class="button product__button">Заказать</a>
-          </li>
-
-        </ul>
-
-        <div class="catalog__see-more see-more">
-          <div class="see-more__img-wrap">
-            <img class="see-more__img" src="img/mobile-plusicon.svg" width="31" height="31">
+            <h3 class="see-more__title">Показать еще 100500 товаров</h3>
+            <small class="see-more__small">На самом деле вкусов гораздо больше!</small>
+            <a href="" class="button see-more__button">Показать все</a>
           </div>
-          <h3 class="see-more__title">Показать еще 100500 товаров</h3>
-          <p class="see-more__text">На самом деле вкусов гораздо больше!</p>
-          <a href="" class="button see-more__button">Показать все</a>
-        </div>
 
+        </div>
       </section>
 
       <section class="additional">
-        <h2 class="additional__title">Дополнительные товары</h2>
+        <div class="container">
 
-        <ul class="additional__list">
-          <li class="additional__item add-product">
-            <div class="add-product__wrapper">
-              <h3 class="add-product__title">Сахарозаменитель</h3>
-              <table class="add-product__properties">
-                <tr class="add-product__row">
-                  <th class="add-product__prop-desc">1 упаковка (100 г)</th>
-                  <td class="add-product__prop-value">200 Р.</td>
-                </tr>
-              </table>
+          <h2 class="additional__title">Дополнительные товары</h2>
+
+          <ul class="additional__list">
+            <li class="additional__item add-product">
+              <div class="add-product__wrapper">
+                <h3 class="add-product__title">Сахарозаменитель</h3>
+                <table class="add-product__properties">
+                  <tr class="add-product__row">
+                    <th class="add-product__prop-desc">1 упаковка (100 г)</th>
+                    <td class="add-product__prop-value">200 Р.</td>
+                  </tr>
+                </table>
+              </div>
+              <a href="" class="button add-product__button">Заказать</a>
+            </li>
+          </ul>
+
+          <div class="additional__bonus bonus">
+            <div class="bonus__img-wrap">
+              <img src="img/mobile-gift.png" class="bonus__img" width="56" height="61">
             </div>
-            <a href="" class="button add-product__button">Заказать</a>
-          </li>
-
-        </ul>
-
-        <div class="additional__bonus bonus">
-          <div class="bonus__img-wrap">
-            <img src="img/mobile-gift.png" class="bonus__img" width="56" height="61">
+            <p class="bonus__text">Закажите все и получите чехол для кота в подарок!</p>
           </div>
-          <p class="bonus__text">Закажите все и получите чехол для кота в подарок!</p>
-        </div>
 
+        </div>
       </section>
 
       <section class="contact contact--grey">
-        <div class="container contact__wrapper">
 
+          <div class="container contact__wrapper">
             <h3 class="contact__title">Приглашаем к сотрудничеству дилеров!</h3>
             <p class="contact__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
 
-        </div>
-
-        <div class="contact__map">
-        </div>
+          <div class="contact__map">
+          </div>
 
       </section>
 
