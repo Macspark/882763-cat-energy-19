@@ -6,10 +6,10 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="container">
+      <div class="page-header__wrapper">
 
-        <a href="index.html" class="page-header__logo-wrap">
-          <img class="page-header__logo" src="img/mobile-logo.svg" width="191" height="39" alt="Cat Energy">
+        <a href="index.html" class="page-header__logo">
+          <img src="./img/mobile-logo.svg" width="191" height="39" alt="Cat Energy">
         </a>
 
         <nav class="main-nav">
@@ -33,7 +33,7 @@
     <main class="page-main">
 
       <section class="catalog">
-        <div class="container">
+        <div class="catalog__wrapper">
 
           <h1 class="catalog__title">Каталог продукции</h1>
 
@@ -41,8 +41,8 @@
 
             <li class="catalog__item product">
               <div class="product__wrapper">
-                <a class="product__img-wrap">
-                  <img src="img/mobile-product-1.png" class="product__img" width="140" height="144" alt="">
+                <a class="product__img">
+                  <img src="./img/mobile-product-1.png" width="140" height="144" alt="">
                 </a>
                 <div class="product__description">
                   <h3 class="product__title">Cat Energy Pro 500 Г</h3>
@@ -68,8 +68,8 @@
           </ul>
 
           <div class="catalog__see-more see-more">
-            <div class="see-more__img-wrap">
-              <img class="see-more__img" src="img/mobile-plusicon.svg" width="31" height="31" alt="Больше товаров">
+            <div class="see-more__img">
+              <img src="./img/mobile-plusicon.svg" width="31" height="31" alt="Больше товаров">
             </div>
             <h3 class="see-more__title">Показать еще 100500 товаров</h3>
             <small class="see-more__small">На самом деле вкусов гораздо больше!</small>
@@ -80,7 +80,7 @@
       </section>
 
       <section class="additional">
-        <div class="container">
+        <div class="additional__wrapper">
 
           <h2 class="additional__title">Дополнительные товары</h2>
 
@@ -100,8 +100,8 @@
           </ul>
 
           <div class="additional__bonus bonus">
-            <div class="bonus__img-wrap">
-              <img src="img/mobile-gift.png" class="bonus__img" width="56" height="61" alt="Подарок">
+            <div class="bonus__img">
+              <img src="./img/mobile-gift.png" width="56" height="61" alt="Подарок">
             </div>
             <p class="bonus__text">Закажите все и получите чехол для кота в подарок!</p>
           </div>
@@ -111,23 +111,23 @@
 
       <section class="contact contact--grey">
 
-          <div class="container contact__wrapper">
-            <h3 class="contact__title">Приглашаем к сотрудничеству дилеров!</h3>
-            <p class="contact__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          </div>
+        <div class="contact__wrapper">
+          <h3 class="contact__title">Приглашаем к сотрудничеству дилеров!</h3>
+          <p class="contact__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
 
-          <div class="contact__map">
-          </div>
+        <div class="contact__map" id="map">
+        </div>
 
       </section>
 
     </main>
 
     <footer class="page-footer">
-      <div class="container">
+      <div class="page-footer__wrapper">
 
         <a href="" class="page-footer__logo">
-          <img class="page-footer__logo" src="img/small-logo.svg" width="128" height="24" alt="Cat Energy">
+          <img src="./img/small-logo.svg" width="128" height="24" alt="Cat Energy">
         </a>
 
         <ul class="page-footer__social social">
@@ -150,5 +150,7 @@
       </div>
     </footer>
 
+  <script src="https://api-maps.yandex.ru/2.1?bab3bdb3-8438-46cd-a063-248910568936&load=package.full&lang=ru_RU"></script>
+  <script src="./js/map.js"></script>
   </body>
 </html>
