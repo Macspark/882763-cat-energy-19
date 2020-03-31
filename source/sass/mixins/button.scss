@@ -1,3 +1,14 @@
 @mixin button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  width: 280px;
+  height: 40px;
+  background-color: $color-leaf;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #ffffff;
 }

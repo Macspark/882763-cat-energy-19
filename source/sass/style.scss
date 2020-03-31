@@ -2,9 +2,13 @@
 @import "base/normalize.scss";
 @import "base/page.scss";
 @import "base/variables.scss";
+@import "base/visually-hidden.scss";
 
 @import "mixins/container.scss";
 @import "mixins/button.scss";
 
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
+@import "blocks/promo.scss";
+@import "blocks/programs.scss";
+@import "blocks/advantage.scss";
