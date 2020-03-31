@@ -1,0 +1,18 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Oswald", "Arial", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
