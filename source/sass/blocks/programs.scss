@@ -59,17 +59,17 @@
   font-weight: normal;
   line-height: 1.54;
   text-transform: uppercase;
-  color: #111111;
+  color: $color-black1;
 }
 
 .programs__desc {
   position: relative;
   margin-bottom: 41px;
 
-  font-family: "Arial", sans-serif;
+  font-family: $font-arial;
   font-size: 14px;
   line-height: 1.29;
-  color: #444444;
+  color: $color-grey1;
 
   &::after {
     position: absolute;
@@ -86,19 +86,18 @@
 }
 
 .programs__button {
-  position: relative;
+  display: inline-block;
+  width: 100%;
 
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
-  color: #111111;
+  color: $color-black1;
 
   &::after {
-    position: absolute;
-    right: -35px;
-    top: 6px;
+    margin-left: 10px;
+    display: inline-block;
 
-    display: block;
     content: "";
     width: 25px;
     height: 12px;

@@ -1,0 +1,21 @@
+.copyright {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright__text {
+  font-family: $font-arial;
+  font-size: 16px;
+  color: $color-grey1;
+}
+
+.copyright__link {
+
+}
+
+.copyright__img {
+  opacity: 0.6;
+}

@@ -1,0 +1,158 @@
+.example {
+  margin-bottom: 12px;
+}
+
+.example__wrapper {
+  @include container-size;
+  @include container-padding;
+  background-color: $color-background;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.example__title {
+  margin-top: 15px;
+  margin-bottom: 25px;
+
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1.67;
+  color: $color-black1;
+}
+
+.example__text {
+  margin-bottom: 25px;
+
+  width: 270px;
+
+  font-family: $font-arial;
+  font-size: 14px;
+  line-height: 1.29;
+  color: $color-grey1;
+}
+
+.example__stats {
+  margin-bottom: 33px;
+}
+
+.example__list {
+  margin-bottom: 34px;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.example__item {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  width: 124px;
+  height: 56px;
+  border: 1px solid $color-white2;
+  border-radius: 3px;
+}
+
+.example__value {
+  margin: 11px 0 0;
+
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-black1;
+}
+
+.example__desc {
+  position: absolute;
+  left: 17px;
+  bottom: -28px;
+
+  width: 87px;
+  min-height: 21px;
+  background-color: $color-background;
+
+  font-family: $font-arial;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  text-transform: lowercase;
+  color: $color-grey1;
+
+}
+
+.example__aftermath {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.43;
+  text-align: center;
+}
+
+.example__before-after {
+  @include container-size;
+  background-color: $color-background;
+  padding-bottom: 40px;
+}
+
+.example__img {
+  margin-bottom: 32px;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.example__img img {
+}
+
+.example__switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.example__button {
+  position: relative;
+
+  width: 84px;
+  height: 14px;
+  background-color: $color-white1;
+
+  border-radius: 6px;
+  border: 1px solid $color-white2;
+
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: $color-black1;
+
+  &::before {
+    position: absolute;
+    top: -4px;
+    left: -55px;
+    display: block;
+    content: "Было";
+  }
+
+  &::after {
+    position: absolute;
+    top: -4px;
+    right: -60px;
+    display: block;
+    content: "Стало";
+  }
+}
+
+.example__button-bar {
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $color-leaf;
+
+  &--switched {
+    transform: translateX(36px);
+  }
+}

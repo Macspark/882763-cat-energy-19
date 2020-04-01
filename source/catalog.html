@@ -14,8 +14,8 @@
         </a>
 
         <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <ul class="main-nav__list">
+          <button class="main-nav__toggle main-nav__toggle--hidden" type="button">Открыть меню</button>
+          <ul class="main-nav__list main-nav__list--active">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
@@ -110,11 +110,11 @@
         </div>
       </section>
 
-      <section class="contact contact--grey">
+      <section class="contact">
 
-        <div class="contact__wrapper">
-          <h3 class="contact__title">Приглашаем к сотрудничеству дилеров!</h3>
-          <p class="contact__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="contact__wrapper contact__wrapper--grey">
+            <h3 class="contact__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
+            <p class="contact__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
 
         <div class="contact__map" id="map">
@@ -133,19 +133,27 @@
 
         <ul class="page-footer__social social">
           <li class="social__item">
-            <a href="https://vk.com" target="_blank" class="social__link social__link--vk">VKontakte</a>
+            <a href="https://vk.com" target="_blank" class="social__link">
+              <img class="social__img" src="../img/icon-vk.svg" width="22" height="12" alt="VKontakte">
+            </a>
           </li>
           <li class="social__item">
-            <a href="https://instagram.com" target="_blank" class="social__link social__link--inst">Instagram</a>
+            <a href="https://instagram.com" target="_blank" class="social__link">
+              <img class="social__img" src="../img/icon-insta.svg" width="17" height="17" alt="Instagram">
+            </a>
           </li>
           <li class="social__item">
-            <a href="https://facebook.com" target="_blank" class="social__link social__link--fb">Facebook</a>
+            <a href="https://facebook.com" target="_blank" class="social__link">
+              <img class="social__img" src="../img/icon-fb.svg" width="10" height="19" alt="Facebook">
+            </a>
           </li>
         </ul>
 
         <div class="page-footer__copyright copyright">
           <p class="copyright__text">HTML Academy</p>
-          <a href="https://htmlacademy.ru" target="_blank" class="copyright__link">Перейти на HTML Academy</a>
+          <a href="https://htmlacademy.ru" target="_blank" class="copyright__link">
+            <img class="copyright__img" src="../img/htmlacademy-logo.svg" width="27" height="34" alt="Перейти на HTML Academy">
+          </a>
         </div>
 
       </div>

@@ -1,0 +1,24 @@
+.page-footer__wrapper {
+  @include container-size;
+  @include container-padding;
+  padding-top: 38px;
+  padding-bottom: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $color-background;
+}
+
+.page-footer__logo {
+  margin-bottom: 13px;
+}
+
+.page-footer__social {
+
+}
+
+.page-footer__copyright {
+
+}

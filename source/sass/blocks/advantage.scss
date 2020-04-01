@@ -1,6 +1,12 @@
+.advantage {
+  margin-bottom: 20px;
+}
+
 .advantage__wrapper {
   @include container-size;
   @include container-padding;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .advantage__title {
@@ -11,7 +17,7 @@
   font-size: 36px;
   font-weight: normal;
   line-height: 1.5;
-  color: #111111;
+  color: $color-black1;
 }
 
 .advantage__list {
@@ -56,8 +62,8 @@
 }
 
 .advantage__text {
-  font-family: "Arial", sans-serif;
+  font-family: $font-arial;
   font-size: 14px;
   line-height: 1.29;
-  color: #444444;
+  color: $color-grey1;
 }
