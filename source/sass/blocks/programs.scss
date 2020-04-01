@@ -69,7 +69,7 @@
   font-family: $font-arial;
   font-size: 14px;
   line-height: 1.29;
-  color: $color-grey1;
+  color: $color-grey2;
 
   &::after {
     position: absolute;
@@ -81,7 +81,7 @@
     width: 240px;
     height: 1px;
 
-    background-color: $color-lightgrey;
+    background-color: $color-grey1;
   }
 }
 
