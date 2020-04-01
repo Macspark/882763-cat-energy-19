@@ -1,0 +1,48 @@
+.add-product {
+  padding-bottom: 17px;
+
+  border-top: 1px solid $color-grey1;
+
+  &:last-of-type {
+    border-bottom: 1px solid $color-grey1;
+  }
+}
+
+.add-product__title {
+  margin: 13px 0 12px;
+
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1;
+  color: $color-black2;
+}
+
+.add-product__properties {
+  margin-bottom: 14px;
+
+  width: 100%;
+
+  font-family: $font-arial;
+  font-size: 14px;
+  line-height: 1;
+  color: $color-grey2;
+
+  border-collapse: collapse;
+}
+
+
+.add-product__prop-desc {
+  font-weight: normal;
+  text-align: left;
+}
+
+.add-product__prop-value {
+  text-align: right;
+}
+
+.add-product__button {
+  @include button;
+  font-size: 16px;
+  line-height: 1.25;
+}

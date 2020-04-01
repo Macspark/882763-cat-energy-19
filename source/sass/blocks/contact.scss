@@ -1,12 +1,16 @@
 .contact__wrapper {
   @include container-size;
   @include container-padding;
-
-  margin-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 10px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.contact__wrapper--grey {
+  background-color: $color-background;
 }
 
 .contact__title {

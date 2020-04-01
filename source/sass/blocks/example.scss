@@ -1,7 +1,3 @@
-.example {
-  margin-bottom: 12px;
-}
-
 .example__wrapper {
   @include container-size;
   @include container-padding;

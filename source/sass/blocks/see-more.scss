@@ -1,0 +1,42 @@
+.see-more {
+  @include container-padding;
+  padding-top: 25px;
+  padding-bottom: 24px;
+
+  border: 1px solid $color-grey3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.see-more__img {
+  opacity: 0.2;
+}
+
+.see-more__title {
+  margin: 21px 0 10px;
+
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: $color-black1;
+}
+
+.see-more__small {
+  margin-bottom: 20px;
+
+  font-family: $font-arial;
+  font-size: 12px;
+  line-height: 1.33;
+  color: $color-grey2;
+}
+
+.see-more__button {
+  @include button;
+  font-size: 16px;
+  line-height: 1.25;
+  background-color: $color-background;
+  color: $color-grey2;
+}
