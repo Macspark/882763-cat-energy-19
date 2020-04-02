@@ -37,84 +37,97 @@
         <div class="apply__wrapper">
           <h1 class="apply__title">Подбор программы</h1>
           <p class="apply__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        </div>
 
           <fieldset class="apply__fieldset fieldset">
-            <ul class="fieldset__list">
-              <li class="fieldset__item">
-                <label class="fieldset__label" for="input-name">Имя:*</label>
-                <input class="fieldset__input" id="input-name" type="text" name="cat-name" placeholder="Барсик" required>
-              </li>
-              <li class="fieldset__item">
-                <label class="fieldset__label" for="input-weight">Вес (кг):*</label>
-                <input class="fieldset__input" id="input-weight" type="number" name="cat-weight" placeholder="7" required>
-              </li>
-              <li class="fieldset__item">
-                <label class="fieldset__label" for="input-age">Возраст (лет):</label>
-                <input class="fieldset__input" id="input-age" type="number" name="cat-age" placeholder="7">
-              </li>
-            </ul>
+            <div class="fieldset__wrapper">
+              <ul class="fieldset__list">
+                <li class="fieldset__item">
+                  <label class="fieldset__label" for="input-name">Имя:*</label>
+                  <input class="fieldset__input" id="input-name" type="text" name="cat-name" placeholder="Барсик" required>
+                </li>
+                <li class="fieldset__item">
+                  <label class="fieldset__label" for="input-weight">Вес (кг):*</label>
+                  <input class="fieldset__input" id="input-weight" type="number" name="cat-weight" placeholder="7" required>
+                </li>
+                <li class="fieldset__item">
+                  <label class="fieldset__label" for="input-age">Возраст (лет):</label>
+                  <input class="fieldset__input" id="input-age" type="number" name="cat-age" placeholder="7">
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <fieldset class="apply__fieldset fieldset fieldset--bordered">
+            <div class="fieldset__wrapper">
+              <ul class="fieldset__list">
+                <li class="fieldset__item">
+                  <input class="fieldset__radio" id="input-slim" type="radio" name="cat-program" value="slim" checked>
+                  <label class="fieldset__label fieldset__label--radio" for="input-slim">Похудение</label>
+                </li>
+                <li class="fieldset__item">
+                  <input class="fieldset__radio" id="input-pro" type="radio" name="cat-program" value="pro">
+                  <label class="fieldset__label fieldset__label--radio" for="input-pro">Набор массы</label>
+                </li>
+                <li class="fieldset__item">
+                  <input class="fieldset__radio" id="input-advice" type="radio" name="cat-program" value="advice">
+                  <label class="fieldset__label fieldset__label--radio" for="input-advice">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
 
           <fieldset class="apply__fieldset fieldset">
-            <ul class="fieldset__list">
-              <li class="fieldset__item">
-                <input class="fieldset__radio" id="input-slim" type="radio" name="cat-program" value="slim" checked>
-                <label class="fieldset__label" for="input-slim">Похудение</label>
-              </li>
-              <li class="fieldset__item">
-                <input class="fieldset__radio" id="input-pro" type="radio" name="cat-program" value="pro">
-                <label class="fieldset__label" for="input-pro">Набор массы</label>
-              </li>
-              <li class="fieldset__item">
-                <input class="fieldset__radio" id="input-advice" type="radio" name="cat-program" value="advice">
-                <label class="fieldset__label" for="input-advice">Не знаю (нужен ваш совет)</label>
-              </li>
-            </ul>
+            <div class="fieldset__wrapper">
+              <legend class="fieldset__legend">Контактные данные (владельца кота)</legend>
+              <ul class="fieldset__list">
+                <li class="fieldset__item">
+                  <label class="fieldset__label" for="input-email">E-mail:*</label>
+                  <input class="fieldset__input fieldset__input--email" id="input-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                </li>
+                <li class="fieldset__item">
+                  <label class="fieldset__label" for="input-tel">Телефон:*</label>
+                  <input class="fieldset__input fieldset__input--tel" id="input-tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                </li>
+              </ul>
+            </div>
           </fieldset>
 
-          <fieldset class="apply__fieldset fieldset fieldset--greenlined">
-            <legend class="fieldset__legend">Контактные данные (владельца кота)</legend>
-            <ul class="fieldset__list">
-              <li class="fieldset__item">
-                <label class="fieldset__label" for="input-email">E-mail:*</label>
-                <input class="fieldset__input fieldset__input--email" id="input-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-              </li>
-              <li class="fieldset__item">
-                <label class="fieldset__label" for="input-tel">Телефон:*</label>
-                <input class="fieldset__input fieldset__input--tel" id="input-tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-              </li>
-            </ul>
+          <fieldset class="apply__fieldset fieldset">
+            <div class="fieldset__wrapper">
+              <legend class="fieldset__legend">Комментарий</legend>
+              <textarea class="fieldset__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </fieldset>
 
-          <fieldset class="apply__fieldset fieldset fieldset--greenlined">
-            <legend class="fieldset__legend">Комментарий</legend>
-            <textarea class="fieldset__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <fieldset class="apply__fieldset fieldset">
+            <div class="fieldset__wrapper">
+              <legend class="fieldset__legend fieldset__legend--longer">Дополнительно</legend>
+              <ul class="fieldset__list">
+                <li class="fieldset__item fieldset__item--shorter">
+                  <input class="fieldset__checkbox" id="input-sweet" type="checkbox" name="sweetener" checked>
+                  <label class="fieldset__label fieldset__label--checkbox" for="input-sweet">Сахарозаменитель</label>
+                </li>
+                <li class="fieldset__item fieldset__item--shorter">
+                  <input class="fieldset__checkbox" id="input-water" type="checkbox" name="water">
+                  <label class="fieldset__label fieldset__label--checkbox" for="input-water">Питьевая вода</label>
+                </li>
+                <li class="fieldset__item fieldset__item--shorter">
+                  <input class="fieldset__checkbox" id="input-milk" type="checkbox" name="milk">
+                  <label class="fieldset__label fieldset__label--checkbox" for="input-milk">Молоко</label>
+                </li>
+                <li class="fieldset__item fieldset__item--shorter">
+                  <input class="fieldset__checkbox" id="input-vitamins" type="checkbox" name="vitamins">
+                  <label class="fieldset__label fieldset__label--checkbox" for="input-vitamins">Витамины</label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
 
-          <fieldset class="apply__fieldset fieldset--greenlined">
-            <legend class="fieldset__legend">Дополнительно</legend>
-            <ul class="fieldset__list">
-              <li class="fieldset__item">
-                <input class="fieldset__checkbox" id="input-sweet" type="checkbox" name="sweetener" checked>
-                <label class="fieldset__label" for="input-sweet">Сахарозаменитель</label>
-              </li>
-              <li class="fieldset__item">
-                <input class="fieldset__checkbox" id="input-water" type="checkbox" name="water">
-                <label class="fieldset__label" for="input-water">Питьевая вода</label>
-              </li>
-              <li class="fieldset__item">
-                <input class="fieldset__checkbox" id="input-milk" type="checkbox" name="milk">
-                <label class="fieldset__label" for="input-milk">Молоко</label>
-              </li>
-              <li class="fieldset__item">
-                <input class="fieldset__checkbox" id="input-vitamins" type="checkbox" name="vitamins">
-                <label class="fieldset__label" for="input-vitamins">Витамины</label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <button class="button apply__button" type="submit">Отправить заявку</button>
-          <small class="apply__small">* — Обязательные поля</small>
+          <div class="apply__wrapper">
+            <button class="button apply__button" type="submit">Отправить заявку</button>
+            <small class="apply__small">* — Обязательные поля</small>
+          </div>
 
         </div>
       </form>
