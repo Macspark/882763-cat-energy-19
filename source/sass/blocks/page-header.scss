@@ -1,9 +1,5 @@
-.page-header {
-}
-
 .page-header__wrapper {
   @include container-size;
-
   border-bottom: 1px solid $color-grey1;
 }
 

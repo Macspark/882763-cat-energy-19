@@ -20,7 +20,7 @@
   }
 
   &--toggled {
-  background: url("../img/icon-close.svg") 50% 50% no-repeat;
+    background: url("../img/icon-close.svg") 50% 50% no-repeat;
   }
 
   &--hidden {
@@ -55,8 +55,4 @@
   color: $color-black1;
 
   border-top: 1px solid $color-grey1;
-}
-
-.main-nav__link {
-
 }

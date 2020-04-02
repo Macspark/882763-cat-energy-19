@@ -40,7 +40,9 @@
   height: 362px;
   background-color: $color-white2;
   background-repeat: no-repeat;
-  background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@1x.png");
+  background-image:
+    url("../img/map-pin.png"),
+    url("../img/bg-map-mobile@1x.png");
   background-position: center 139px, 0 -38px;
   background-size: 62px 53px, 100%;
 }
