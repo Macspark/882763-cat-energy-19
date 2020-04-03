@@ -1,0 +1,28 @@
+@mixin container-size {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $maxwidth-phone;
+
+  @media (min-width: $maxwidth-tablet) {
+    max-width: $maxwidth-tablet;
+  }
+
+  @media (min-width: $maxwidth-desktop) {
+    max-width: $maxwidth-desktop;
+  }
+}
+
+@mixin container-padding {
+  padding-left: $padding-phone;
+  padding-right: $padding-phone;
+
+  @media (min-width: $maxwidth-tablet) {
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+
+  @media (min-width: $maxwidth-desktop) {
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+  }
+}

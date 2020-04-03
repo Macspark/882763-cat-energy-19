@@ -1,0 +1,49 @@
+.apply__wrapper {
+  @include container-size;
+  @include container-padding;
+  margin-bottom: 34px;
+}
+
+.apply__title {
+  margin-top: 17px;
+
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1.67;
+  color: $color-black1;
+}
+
+.apply__text {
+  width: 230px;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.29;
+  color: $color-black1;
+}
+
+.apply__button {
+  @include button;
+  margin-bottom: 23px;
+
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.apply__small {
+  display: block;
+
+  font-family: $font-arial;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  color: $color-grey2;
+}
+
+.apply__fieldset {
+  margin-bottom: 12px;
+
+  &:last-of-type {
+    margin-bottom: 18px;
+  }
+}
