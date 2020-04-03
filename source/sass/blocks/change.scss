@@ -1,0 +1,122 @@
+.change {
+  @include container-size;
+  background-color: $color-background;
+  padding-bottom: 40px;
+}
+
+.change__wrapper {
+  position: relative;
+  margin-bottom: 32px;
+  width: 320px;
+  height: 240px;
+}
+
+.change__img {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  &--active {
+    display: block;
+  }
+}
+
+.change__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.change__switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.change__button {
+  position: relative;
+
+  width: 84px;
+  height: 14px;
+  background-color: $color-white1;
+
+  border-radius: 6px;
+  border: 1px solid $color-white2;
+
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: $color-black1;
+
+  &::before {
+    position: absolute;
+    top: -4px;
+    left: -55px;
+    display: block;
+    content: "Было";
+  }
+
+  &::after {
+    position: absolute;
+    top: -4px;
+    right: -60px;
+    display: block;
+    content: "Стало";
+  }
+}
+
+.change__button-bar {
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $color-leaf;
+
+  &--switched {
+    transform: translateX(36px);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .change {
+    padding-bottom: 67px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: linear-gradient(to top, $color-background 462px, $color-white1 462px);
+  }
+
+  .change__wrapper {
+    padding: 0 7px;
+    margin-bottom: 13px;
+
+    width: 690px;
+    height: 517px;
+  }
+
+  .change__img {
+    display: block;
+  }
+
+  .change__img--after {
+    display: none;
+  }
+
+  .change__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .change__button-bar {
+    width: 8px;
+    height: 8px;
+  }
+}

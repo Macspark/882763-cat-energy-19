@@ -24,3 +24,37 @@
     margin-right: 0;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .social {
+    width: auto;
+    border: none;
+  }
+
+  .social__item {
+    margin: 0 14px;
+
+    &:first-of-type {
+      margin-left: 17px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .social__link--vk img {
+    width: 30px;
+    height: 16px;
+  }
+
+  .social__link--insta img {
+    width: 23px;
+    height: 23px;
+  }
+
+  .social__link--fb img {
+    width: 14px;
+    height: 28px;
+  }
+}

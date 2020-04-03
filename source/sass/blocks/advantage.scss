@@ -71,7 +71,10 @@
 
 @media (min-width: $tablet-width) {
   .advantage__wrapper {
-    padding-top: 15px;
+    position: relative;
+    padding-top: 13px;
+
+    border-bottom: 1px solid $color-grey1;
   }
 
   .advantage__title {
@@ -81,6 +84,7 @@
   }
 
   .advantage__list {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
   }
@@ -95,6 +99,10 @@
 
     &:nth-child(2n) {
       margin-right: 0;
+    }
+
+    &:nth-last-child(-n+2) {
+      margin-bottom: 70px;
     }
   }
 

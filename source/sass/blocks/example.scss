@@ -44,7 +44,8 @@
   position: relative;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   width: 124px;
   height: 56px;
@@ -62,9 +63,8 @@
 }
 
 .example__desc {
-  position: absolute;
-  left: 17px;
-  bottom: -28px;
+  margin-top: 8px;
+  padding: 0 5px;
 
   width: 87px;
   min-height: 21px;
@@ -85,66 +85,66 @@
   text-align: center;
 }
 
-.example__before-after {
-  @include container-size;
-  background-color: $color-background;
-  padding-bottom: 40px;
-}
-
-.example__img {
-  margin-bottom: 32px;
-  display: none;
-
-  &--active {
-    display: block;
-  }
-}
-
-.example__switch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.example__button {
-  position: relative;
-
-  width: 84px;
-  height: 14px;
-  background-color: $color-white1;
-
-  border-radius: 6px;
-  border: 1px solid $color-white2;
-
-  font-size: 16px;
-  line-height: 1.25;
-  text-transform: uppercase;
-  color: $color-black1;
-
-  &::before {
-    position: absolute;
-    top: -4px;
-    left: -55px;
-    display: block;
-    content: "Было";
+@media (min-width: $tablet-width) {
+  .example {
+    margin-bottom: 32px;
   }
 
-  &::after {
-    position: absolute;
-    top: -4px;
-    right: -60px;
-    display: block;
-    content: "Стало";
+  .example__wrapper {
+    background: none;
   }
-}
 
-.example__button-bar {
-  width: 35px;
-  height: 6px;
-  border-radius: 3px;
-  background-color: $color-leaf;
+  .example__title {
+    margin-top: 22px;
+    margin-bottom: 65px;
+    font-size: 60px;
+    line-height: 1;
+    color: $color-black1;
+  }
 
-  &--switched {
-    transform: translateX(36px);
+  .example__text {
+    margin-bottom: 36px;
+    max-width: 678px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .example__stats {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__item {
+    margin-right: 42px;
+    width: 162px;
+    height: 72px;
+  }
+
+  .example__value {
+    margin: 15px 0 0;
+    font-size: 30px;
+    line-height: 1.23;
+  }
+
+  .example__desc {
+    margin-top: 11px;
+    padding: 0 8px;
+
+    width: auto;
+    height: auto;
+    background-color: $color-white1;
+    font-size: 14px;
+  }
+
+  .example__aftermath {
+    margin-top: 22px;
+    width: 175px;
+    font-size: 20px;
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  .example__change {
+    margin-top: 18px;
   }
 }

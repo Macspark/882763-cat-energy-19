@@ -114,7 +114,7 @@
             <ul class="example__list">
               <li class="example__item">
                 <p class="example__value">5 кг</p>
-                <p class="example__desc">Снижение<br> веса</p>
+                <p class="example__desc">Снижение веса</p>
               </li>
               <li class="example__item">
                 <p class="example__value">60 дней</p>
@@ -126,16 +126,26 @@
 
         </div>
 
-        <div class="example__before-after">
-          <div class="example__img example__img--active">
-            <img src="./img/before-mobile@1x.png" width="320" height="240" alt="Кот Борис: до">
+        <div class="example__change change">
+          <div class="change__wrapper">
+            <div class="change__img change__img--before change__img--active">
+              <picture>
+                <!--<source srcset="./img/before-desktop@1x.png" media="(min-width: 1300px)">-->
+                <source srcset="./img/before-tablet@1x.png" media="(min-width: 768px)">
+                <img src="./img/before-mobile@1x.png" width="320" height="240" alt="Кот Борис: до">
+              </picture>
+            </div>
+            <div class="change__img change__img--after">
+              <picture>
+                <!--<source srcset="./img/after-desktop@1x.png" media="(min-width: 1300px)">-->
+                <source srcset="./img/after-tablet@1x.png" media="(min-width: 768px)">
+                <img src="./img/after-mobile@1x.png" width="320" height="240" alt="Кот Борис: пссле">
+              </picture>
+            </div>
           </div>
-          <div class="example__img">
-            <img src="./img/after-mobile@1x.png" width="320" height="240" alt="Кот Борис: после">
-          </div>
-          <div class="example__switch">
-            <button class="example__button" type="button">
-              <div class="example__button-bar"></div>
+          <div class="change__switch">
+            <button class="change__button" type="button">
+              <div class="change__button-bar"></div>
             </button>
           </div>
         </div>
@@ -146,7 +156,10 @@
 
         <div class="contact__wrapper">
             <h3 class="contact__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
-            <p class="contact__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <div class="contact__address">
+              <p class="contact__text">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="contact__text">Санкт-Петербург</p>
+            </div>
         </div>
 
         <div class="contact__map" id="map">
@@ -165,17 +178,17 @@
 
         <ul class="page-footer__social social">
           <li class="social__item">
-            <a href="https://vk.com" target="_blank" class="social__link">
+            <a href="https://vk.com" target="_blank" class="social__link social__link--vk">
               <img src="./img/icon-vk.svg" width="22" height="12" alt="VKontakte">
             </a>
           </li>
           <li class="social__item">
-            <a href="https://instagram.com" target="_blank" class="social__link">
+            <a href="https://instagram.com" target="_blank" class="social__link social__link--insta">
               <img src="./img/icon-insta.svg" width="17" height="17" alt="Instagram">
             </a>
           </li>
           <li class="social__item">
-            <a href="https://facebook.com" target="_blank" class="social__link">
+            <a href="https://facebook.com" target="_blank" class="social__link social__link--fb">
               <img src="./img/icon-fb.svg" width="10" height="19" alt="Facebook">
             </a>
           </li>

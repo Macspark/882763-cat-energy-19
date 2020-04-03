@@ -14,3 +14,19 @@
 .page-footer__logo {
   margin-bottom: 13px;
 }
+
+@media (min-width: $tablet-width) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo {
+    padding-top: 16px;
+  }
+
+  .page-footer__logo img {
+    width: 128px;
+    height: 24px;
+  }
+}
