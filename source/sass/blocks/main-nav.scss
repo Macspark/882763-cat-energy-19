@@ -68,6 +68,8 @@
   }
 
   .main-nav__item {
+    position: relative;
+
     margin-right: 35px;
     width: auto;
 
@@ -77,6 +79,19 @@
     color: $color-black2;
 
     border: none;
+  }
+
+  .main-nav__item--active::after {
+    position: absolute;
+    left: 0;
+    bottom: 11px;
+
+    display: block;
+    content: "";
+    width: 99%;
+    height: 2px;
+
+    background-color: $color-leaf;
   }
 
   .main-nav__item:last-child {

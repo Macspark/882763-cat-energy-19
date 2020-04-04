@@ -2,6 +2,10 @@
   @include container-size;
   @include container-padding;
   margin-bottom: 34px;
+
+  &:last-of-type {
+    margin-bottom: 31px;
+  }
 }
 
 .apply__title {
@@ -45,5 +49,52 @@
 
   &:last-of-type {
     margin-bottom: 18px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .apply__title {
+    margin-top: 53px;
+    margin-bottom: 55px;
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  .apply__text {
+    margin-left: 40px;
+    margin-bottom: 60px;
+
+    width: 340px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .apply__fieldset {
+    margin-bottom: 62px;
+
+    &--shortermargin {
+      margin-bottom: 50px;
+    }
+  }
+
+  .apply__wrapper:last-of-type {
+    margin-top: -13px;
+    margin-bottom: 49px;
+    display: flex;
+  }
+
+  .apply__small {
+    padding-top: 16px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .apply__button {
+    margin-left: 40px;
+    margin-right: 62px;
+    width: 283px;
+    height: 52px;
+    font-size: 20px;
+    line-height: 1;
   }
 }

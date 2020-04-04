@@ -87,10 +87,13 @@
 
 @media (min-width: $tablet-width) {
   .example {
-    margin-bottom: 32px;
+    margin-top: -68px;
+    margin-bottom: 0;
   }
 
   .example__wrapper {
+    padding-top: 20px;
+    border-top: 1px solid $color-grey1;
     background: none;
   }
 
