@@ -1,12 +1,13 @@
 .change {
-  @include container-size;
-  background-color: $color-background;
   padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .change__wrapper {
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
   width: 320px;
   height: 240px;
 }
@@ -84,8 +85,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background: linear-gradient(to top, $color-background 462px, $color-white1 462px);
   }
 
   .change__wrapper {
@@ -118,5 +117,11 @@
   .change__button-bar {
     width: 8px;
     height: 8px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .change {
+    background: none;
   }
 }

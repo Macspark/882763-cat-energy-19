@@ -1,16 +1,16 @@
+.contact--grey {
+  background-color: $color-background;
+}
+
 .contact__wrapper {
   @include container-size;
   @include container-padding;
-  padding-top: 12px;
+  padding-top: 11px;
   padding-bottom: 10px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.contact__wrapper--grey {
-  background-color: $color-background;
 }
 
 .contact__title {
@@ -36,8 +36,6 @@
 }
 
 .contact__map {
-  @include container-size;
-
   width: 100%;
   height: 362px;
   background-color: $color-white2;
@@ -71,5 +69,33 @@
 
   .contact__map {
     height: 400px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contact {
+    position: relative;
+  }
+
+  .contact__wrapper {
+    position: absolute;
+    left: 182px;
+    top: 95px;
+
+    padding-left: 75px;
+    padding-right: 65px;
+
+    width: 570px;
+    background-color: $color-white1;
+
+    z-index: 1;
+  }
+
+  .contact__map {
+    margin-bottom: 3px;
+  }
+
+  .contact__text {
+    text-align: left;
   }
 }

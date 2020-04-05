@@ -28,7 +28,8 @@
 .advantage__item {
   position: relative;
   padding-left: 80px;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
+  min-height: 60px;
 }
 
 .advantage__item::before {
@@ -88,12 +89,12 @@
   }
 
   .advantage__item {
-    margin-right: 139px;
+    margin-right: 123px;
     margin-bottom: 118px;
     padding-top: 95px;
     padding-left: 0;
 
-    max-width: 245px;
+    width: 37%;
 
     &:nth-child(2n) {
       margin-right: 0;
@@ -135,5 +136,20 @@
   .advantage__text {
     font-size: 16px;
     line-height: 1.5;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantage {
+    margin-bottom: 1px;
+  }
+
+  .advantage .advantage__item {
+    width: 245px;
+    margin-right: 80px;
+  }
+
+  .advantage__item:nth-child(4n){
+    margin-right: 0;
   }
 }

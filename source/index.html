@@ -12,7 +12,7 @@
 
         <a href="" class="page-header__logo">
           <picture>
-          <!-- <source srcset="./img/logo-desktop.svg" media="(min-width: 1300px)"> -->
+            <source srcset="./img/logo-desktop.svg" media="(min-width: 1300px)">
             <source srcset="./img/logo-tablet.svg" media="(min-width: 768px)">
             <img src="./img/logo-mobile.svg" width="191" height="39" alt="Cat Energy">
           </picture>
@@ -45,7 +45,7 @@
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <div class="promo__img">
             <picture>
-            <!-- <source srcset="./img/index-can-desktop@1x.png" media="(min-width: 1300px)"> -->
+              <source srcset="./img/index-can-desktop@1x.png" media="(min-width: 1300px)">
               <source srcset="./img/index-can-tablet@1x.jpg" media="(min-width: 768px)">
               <img src="./img/index-can-mobile@1x.png" width="280" height="270" alt="Cat Energy">
             </picture>
@@ -104,52 +104,56 @@
       <section class="example">
         <div class="example__wrapper">
 
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__text">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-          </p>
+          <div class="example__stats stats">
+            <h2 class="stats__title">Живой пример</h2>
+            <p class="stats__text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
 
-          <div class="example__stats">
-            <ul class="example__list">
-              <li class="example__item">
-                <p class="example__value">5 кг</p>
-                <p class="example__desc">Снижение веса</p>
-              </li>
-              <li class="example__item">
-                <p class="example__value">60 дней</p>
-                <p class="example__desc">Затрачено времени</p>
-              </li>
-            </ul>
-            <p class="example__aftermath">Затраты на питание: 15 000 руб.</p>
+            <div class="stats__wrapper">
+              <ul class="stats__list">
+                <li class="stats__item">
+                  <p class="stats__value">5 кг</p>
+                  <p class="stats__desc">Снижение веса</p>
+                </li>
+                <li class="stats__item">
+                  <p class="stats__value">60 дней</p>
+                  <p class="stats__desc">Затрачено времени</p>
+                </li>
+              </ul>
+              <div class="stats__aftermath">
+                <p class="stats__spent">Затраты на питание:</p>
+                <p class="stats__spent">15 000 руб.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="example__change change">
+            <div class="change__wrapper">
+              <div class="change__img change__img--before change__img--active">
+                <picture>
+                  <source srcset="./img/before-desktop@1x.png" media="(min-width: 1300px)">
+                  <source srcset="./img/before-tablet@1x.png" media="(min-width: 768px)">
+                  <img src="./img/before-mobile@1x.png" width="320" height="240" alt="Кот Борис: до">
+                </picture>
+              </div>
+              <div class="change__img change__img--after">
+                <picture>
+                  <source srcset="./img/after-desktop@1x.png" media="(min-width: 1300px)">
+                  <source srcset="./img/after-tablet@1x.png" media="(min-width: 768px)">
+                  <img src="./img/after-mobile@1x.png" width="320" height="240" alt="Кот Борис: пссле">
+                </picture>
+              </div>
+            </div>
+            <div class="change__switch">
+              <button class="change__button" type="button">
+                <div class="change__button-bar"></div>
+              </button>
+            </div>
           </div>
 
         </div>
-
-        <div class="example__change change">
-          <div class="change__wrapper">
-            <div class="change__img change__img--before change__img--active">
-              <picture>
-                <!--<source srcset="./img/before-desktop@1x.png" media="(min-width: 1300px)">-->
-                <source srcset="./img/before-tablet@1x.png" media="(min-width: 768px)">
-                <img src="./img/before-mobile@1x.png" width="320" height="240" alt="Кот Борис: до">
-              </picture>
-            </div>
-            <div class="change__img change__img--after">
-              <picture>
-                <!--<source srcset="./img/after-desktop@1x.png" media="(min-width: 1300px)">-->
-                <source srcset="./img/after-tablet@1x.png" media="(min-width: 768px)">
-                <img src="./img/after-mobile@1x.png" width="320" height="240" alt="Кот Борис: пссле">
-              </picture>
-            </div>
-          </div>
-          <div class="change__switch">
-            <button class="change__button" type="button">
-              <div class="change__button-bar"></div>
-            </button>
-          </div>
-        </div>
-
       </section>
 
       <section class="contact">

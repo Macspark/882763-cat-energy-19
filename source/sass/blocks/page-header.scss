@@ -34,3 +34,18 @@
     height: 59px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page-header__wrapper {
+    padding-top: 54px;
+  }
+
+  .page-header__logo {
+    padding-bottom: 3px;
+  }
+
+  .page-header__logo img {
+    width: 203px;
+    height: 60px;
+  }
+}
