@@ -28,7 +28,9 @@
 
 .apply__button {
   @include button;
-  margin-bottom: 23px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 22px;
 
   font-size: 16px;
   line-height: 1.25;
@@ -80,6 +82,7 @@
   .apply__wrapper:last-of-type {
     margin-top: -13px;
     margin-bottom: 49px;
+    width: $tablet-width;
     display: flex;
   }
 
