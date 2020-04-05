@@ -104,7 +104,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav::before {
+  .main-nav--index::before {
     position: absolute;
     top: -54px;
     right: -109px;
@@ -124,6 +124,9 @@
   .main-nav__link {
     font-size: 20px;
     line-height: 1.25;
+  }
+
+  .main-nav--index .main-nav__link {
     color: $color-white1;
   }
 }

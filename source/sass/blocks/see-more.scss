@@ -2,6 +2,8 @@
   padding-top: 25px;
   padding-bottom: 24px;
 
+  width: 100%;
+
   border: 1px solid $color-grey3;
 
   display: flex;
@@ -79,5 +81,16 @@
 
   .see-more__button {
     width: 249px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .see-more {
+    width: 245px;
+  }
+
+  .see-more__button {
+    width: 169px;
   }
 }

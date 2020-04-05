@@ -3,6 +3,7 @@
   @include container-padding;
 
   position: relative;
+  margin-bottom: 37px;
 
   &::after {
     position: absolute;
@@ -36,42 +37,15 @@
   margin-bottom: 39px;
   padding: 0;
   list-style: none;
-}
-
-.additional__bonus {
-  margin-bottom: 35px;
-  padding-top: 65px;
-
-  height: 289px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  background-color: $color-leaf;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
-}
-
-.additional__img {
-  margin-bottom: 43px;
-}
-
-.additional__img img {
-  filter: invert(100%);
-}
-
-.additional__offer {
-  width: 165px;
-
-  font-family: $font-arial;
-  font-size: 16px;
-  line-height: 1.25;
-  text-align: center;
-  color: $color-white1;
 }
 
 @media (min-width: $tablet-width) {
   .additional {
     margin-top: -20px;
+    margin-bottom: 75px;
   }
 
   .additional__list {
@@ -85,7 +59,6 @@
 
   .additional__title {
     padding-left: 37px;
-    padding-right: 33px;
     margin-bottom: 81px;
 
     width: 410px;
@@ -94,26 +67,44 @@
   }
 
   .additional__bonus {
-    padding-top: 0;
-    padding-left: 91px;
-    padding-right: 120px;
-    padding-bottom: 5px;
-
     margin-bottom: 76px;
+  }
+}
 
-    flex-direction: row;
-    justify-content: space-between;
+@media (min-width: $desktop-width) {
+  .additional__title {
+    padding-left: 0;
 
-    height: 200px;
-    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    width: 373px;
+    font-size: 36px;
+    line-height: 1;
+
+    &::before {
+      position: absolute;
+      left: -40px;
+      top: 0;
+
+      display: block;
+      content: "";
+      width: 40px;
+      height: 100%;
+      background-color: $color-white1;
+    }
   }
 
-  .additional__offer {
-    padding-top: 12px;
-    text-align: left;
+  .additional__wrapper {
+    padding-top: 116px;
+    border: 1px solid red;
+    display: flex;
   }
 
-  .additional__img {
+  .additional__list {
     margin: 0;
+  }
+
+  .additional__title {
+    position: absolute;
+    left: 40px;
+    top: -29px;
   }
 }
