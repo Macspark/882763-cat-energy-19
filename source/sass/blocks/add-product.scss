@@ -99,7 +99,36 @@
 @media (min-width: $desktop-width) {
   .add-product {
     margin: 0;
+    padding: 0;
+
+    flex-direction: row;
+    justify-content: space-between;
+    width: 895px;
+
     border-left: none;
     border-right: none;
   }
+
+  .add-product__wrapper {
+    justify-content: stretch;
+  }
+
+  .add-product__button {
+    margin: 0;
+    width: 245px;
+  }
+
+  .add-product__title {
+    width: 285px;
+    margin-right: 40px;
+  }
+
+  .add-product__prop-desc {
+    width: 225px;
+  }
+
+  .add-product__prop-value {
+    padding-left: 20px;
+  }
+
 }

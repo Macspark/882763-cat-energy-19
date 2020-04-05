@@ -117,16 +117,16 @@
     background-image: url("../img/index-background-desktop.png");
   }
 
-  .main-nav__item--active::after {
+  .main-nav--index .main-nav__link {
+    color: $color-white1;
+  }
+
+  .main-nav--index .main-nav__item--active::after {
     background-color: $color-white1;
   }
 
   .main-nav__link {
     font-size: 20px;
     line-height: 1.25;
-  }
-
-  .main-nav--index .main-nav__link {
-    color: $color-white1;
   }
 }

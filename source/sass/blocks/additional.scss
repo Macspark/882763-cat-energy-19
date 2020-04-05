@@ -72,6 +72,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .additional {
+    margin-bottom: 86px;
+  }
+
   .additional__title {
     padding-left: 0;
 
@@ -93,13 +97,13 @@
   }
 
   .additional__wrapper {
-    padding-top: 116px;
-    border: 1px solid red;
+    padding-top: 118px;
     display: flex;
   }
 
   .additional__list {
     margin: 0;
+    margin-right: 80px;
   }
 
   .additional__title {
