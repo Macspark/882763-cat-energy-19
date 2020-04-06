@@ -364,14 +364,12 @@
   }
 
   .fieldset__list--contact {
+    margin-bottom: 18px;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .fieldset__list--contact {
-    margin-bottom: 18px;
   }
 
   .fieldset__list--contact .fieldset__item {
@@ -409,5 +407,4 @@
       margin-right: 0;
     }
   }
-
 }
