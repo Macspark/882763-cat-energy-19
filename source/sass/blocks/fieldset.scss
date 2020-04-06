@@ -27,7 +27,6 @@
   }
 
   &--bordered {
-    margin-bottom: 25px;
     padding-top: 25px;
 
     width: 100%;
@@ -227,7 +226,6 @@
     padding-top: 31px;
     padding-left: 28px;
     padding-bottom: 24px;
-    margin-bottom: 70px;
   }
 
   .fieldset--greenlined::after {
@@ -308,12 +306,12 @@
     height: 18px;
   }
 
-  .fieldset__list--flex {
+  .fieldset__list--additional {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .fieldset__list--flex .fieldset__item {
+  .fieldset__list--additional .fieldset__item {
     width: 280px;
     margin-right: 65px;
     margin-bottom: 42px;
@@ -339,4 +337,77 @@
   .fieldset__checkbox:checked + .fieldset__label--checkbox::before {
     background-size: 21px 16px;
   }
+}
+
+@media (min-width: $desktop-width) {
+  .fieldset {
+    @include container-padding;
+    padding: 0;
+    width: 100%;
+  }
+
+  .fieldset--bordered {
+    padding-top: 32px;
+  }
+
+  .fieldset--bordered .fieldset__item {
+    width: 513px;
+  }
+
+  .fieldset__item {
+    width: 570px;
+  }
+
+  .fieldset::after {
+    top: 21px;
+    width: 1440px;
+  }
+
+  .fieldset__list--contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .fieldset__list--contact {
+    margin-bottom: 18px;
+  }
+
+  .fieldset__list--contact .fieldset__item {
+    margin-bottom: 0;
+  }
+
+  .fieldset__input--email {
+    background-position: 96% center;
+  }
+
+  .fieldset__input--tel {
+    background-position: 96% center;
+  }
+
+  .fieldset__textarea {
+    margin-bottom: 4px;
+    width: 1220px;
+    height: 174px;
+  }
+
+  .fieldset__list--additional {
+    width: 100%;
+  }
+
+  .fieldset__list--additional .fieldset__item {
+    width: 220px;
+    margin-right: 105px;
+    margin-bottom: 42px;
+
+    &:nth-child(2n) {
+      margin-right: 105px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
 }

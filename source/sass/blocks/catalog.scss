@@ -5,9 +5,12 @@
 
 .catalog__wrapper {
   @include container-size;
+  @include container-padding;
 }
 
 .catalog__title {
+  @include center-text;
+
   margin-top: 15px;
   margin-bottom: 29px;
 
@@ -27,10 +30,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .catalog__wrapper {
-    @include container-padding;
-  }
-
   .catalog__title {
     margin-top: 53px;
     margin-bottom: 81px;
@@ -65,7 +64,7 @@
   }
 
   .catalog__title {
-    margin-top: 68px;
+    margin-top: 70px;
   }
 
   .catalog__list {

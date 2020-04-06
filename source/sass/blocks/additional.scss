@@ -12,7 +12,7 @@
 
     display: block;
     content: "";
-    width: 170px;
+    width: 100%;
     height: 3px;
     background-color: $color-leaf;
   }
@@ -31,6 +31,18 @@
   background-color: $color-white1;
 
   z-index: 2;
+
+  &::before {
+    position: absolute;
+    left: -20px;
+    top: 0;
+
+    display: block;
+    content: "";
+    width: 20px;
+    height: 100%;
+    background-color: $color-white1;
+  }
 }
 
 .additional__list {
@@ -64,6 +76,10 @@
     width: 410px;
     font-size: 36px;
     line-height: 1;
+
+    &::before {
+      display: none;
+    }
   }
 
   .additional__bonus {
@@ -88,15 +104,9 @@
     line-height: 1;
 
     &::before {
-      position: absolute;
-      left: -40px;
-      top: 0;
-
       display: block;
-      content: "";
+      left: -40px;
       width: 40px;
-      height: 100%;
-      background-color: $color-white1;
     }
   }
 

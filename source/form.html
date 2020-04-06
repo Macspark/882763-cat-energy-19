@@ -41,8 +41,10 @@
       <form class="apply" action="https://echo.htmlacademy.ru" method="post">
         <div class="apply__wrapper">
           <h1 class="apply__title">Подбор программы</h1>
-          <p class="apply__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+          <p class="apply__text">Заполните анкету и мы подберем<br>программу питания для вашего кота</p>
         </div>
+
+        <div class="apply__cat-info">
 
           <fieldset class="apply__fieldset fieldset">
             <div class="fieldset__wrapper">
@@ -82,59 +84,60 @@
             </div>
           </fieldset>
 
-          <fieldset class="apply__fieldset apply__fieldset--shortermargin fieldset fieldset--greenlined">
-            <div class="fieldset__wrapper">
-              <legend class="fieldset__legend">Контактные данные (владельца кота)</legend>
-              <ul class="fieldset__list">
-                <li class="fieldset__item">
-                  <label class="fieldset__label" for="input-email">E-mail:*</label>
-                  <input class="fieldset__input fieldset__input--email" id="input-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-                </li>
-                <li class="fieldset__item">
-                  <label class="fieldset__label" for="input-tel">Телефон:*</label>
-                  <input class="fieldset__input fieldset__input--tel" id="input-tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-
-          <fieldset class="apply__fieldset fieldset fieldset--greenlined">
-            <div class="fieldset__wrapper">
-              <legend class="fieldset__legend fieldset__legend--shortermargin">Комментарий</legend>
-              <textarea class="fieldset__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </div>
-          </fieldset>
-
-          <fieldset class="apply__fieldset fieldset fieldset--greenlined">
-            <div class="fieldset__wrapper">
-              <legend class="fieldset__legend fieldset__legend--bigmargin">Дополнительно</legend>
-              <ul class="fieldset__list fieldset__list--flex">
-                <li class="fieldset__item fieldset__item--shortermargin">
-                  <input class="fieldset__checkbox" id="input-sweet" type="checkbox" name="sweetener" checked>
-                  <label class="fieldset__label fieldset__label--checkbox" for="input-sweet">Сахарозаменитель</label>
-                </li>
-                <li class="fieldset__item fieldset__item--shortermargin">
-                  <input class="fieldset__checkbox" id="input-water" type="checkbox" name="water">
-                  <label class="fieldset__label fieldset__label--checkbox" for="input-water">Питьевая вода</label>
-                </li>
-                <li class="fieldset__item fieldset__item--shortermargin">
-                  <input class="fieldset__checkbox" id="input-milk" type="checkbox" name="milk">
-                  <label class="fieldset__label fieldset__label--checkbox" for="input-milk">Молоко</label>
-                </li>
-                <li class="fieldset__item fieldset__item--shortermargin">
-                  <input class="fieldset__checkbox" id="input-vitamins" type="checkbox" name="vitamins">
-                  <label class="fieldset__label fieldset__label--checkbox" for="input-vitamins">Витамины</label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-
-          <div class="apply__wrapper">
-            <button class="button apply__button" type="submit">Отправить заявку</button>
-            <small class="apply__small">* — Обязательные поля</small>
-          </div>
-
         </div>
+
+        <fieldset class="apply__fieldset apply__fieldset--shortermargin fieldset fieldset--greenlined">
+          <div class="fieldset__wrapper">
+            <legend class="fieldset__legend">Контактные данные (владельца кота)</legend>
+            <ul class="fieldset__list fieldset__list--contact">
+              <li class="fieldset__item">
+                <label class="fieldset__label" for="input-email">E-mail:*</label>
+                <input class="fieldset__input fieldset__input--email" id="input-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              </li>
+              <li class="fieldset__item">
+                <label class="fieldset__label" for="input-tel">Телефон:*</label>
+                <input class="fieldset__input fieldset__input--tel" id="input-tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+
+        <fieldset class="apply__fieldset fieldset fieldset--greenlined">
+          <div class="fieldset__wrapper">
+            <legend class="fieldset__legend fieldset__legend--shortermargin">Комментарий</legend>
+            <textarea class="fieldset__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="apply__fieldset fieldset fieldset--greenlined">
+          <div class="fieldset__wrapper">
+            <legend class="fieldset__legend fieldset__legend--bigmargin">Дополнительно</legend>
+            <ul class="fieldset__list fieldset__list--additional">
+              <li class="fieldset__item fieldset__item--shortermargin">
+                <input class="fieldset__checkbox" id="input-sweet" type="checkbox" name="sweetener" checked>
+                <label class="fieldset__label fieldset__label--checkbox" for="input-sweet">Сахарозаменитель</label>
+              </li>
+              <li class="fieldset__item fieldset__item--shortermargin">
+                <input class="fieldset__checkbox" id="input-water" type="checkbox" name="water">
+                <label class="fieldset__label fieldset__label--checkbox" for="input-water">Питьевая вода</label>
+              </li>
+              <li class="fieldset__item fieldset__item--shortermargin">
+                <input class="fieldset__checkbox" id="input-milk" type="checkbox" name="milk">
+                <label class="fieldset__label fieldset__label--checkbox" for="input-milk">Молоко</label>
+              </li>
+              <li class="fieldset__item fieldset__item--shortermargin">
+                <input class="fieldset__checkbox" id="input-vitamins" type="checkbox" name="vitamins">
+                <label class="fieldset__label fieldset__label--checkbox" for="input-vitamins">Витамины</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+
+        <div class="apply__wrapper">
+          <button class="button apply__button" type="submit">Отправить заявку</button>
+          <small class="apply__small">* — Обязательные поля</small>
+        </div>
+
       </form>
 
       <section class="contact contact--grey">
