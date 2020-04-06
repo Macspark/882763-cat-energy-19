@@ -91,6 +91,23 @@
 @media (min-width: $desktop-width) {
   .promo {
     margin-bottom: 68px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 1px;
+
+      display: block;
+      content: "";
+      width: 50%;
+      height: 696px;
+      background-color: $color-leaf;
+      background-image: url("../img/index-background-desktop.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      z-index: -1;
+    }
   }
 
   .promo__wrapper {
@@ -109,7 +126,6 @@
   .promo__img {
     left: 490px;
     top: 23px;
-    z-index: 1;
   }
 
   .promo__img img {

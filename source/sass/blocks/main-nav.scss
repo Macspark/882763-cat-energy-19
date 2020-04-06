@@ -104,19 +104,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav--index::before {
-    position: absolute;
-    top: -54px;
-    right: -109px;
-
-    display: block;
-    content: "";
-    width: 720px;
-    height: 696px;
-    background-color: $color-leaf;
-    background-image: url("../img/index-background-desktop.png");
-  }
-
   .main-nav--index .main-nav__link {
     color: $color-white1;
   }
