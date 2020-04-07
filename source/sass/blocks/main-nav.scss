@@ -18,14 +18,6 @@
   &:hover {
     cursor: pointer;
   }
-
-  &--toggled {
-    background: url("../img/icon-close.svg") 50% 50% no-repeat;
-  }
-
-  &--hidden {
-    display: none;
-  }
 }
 
 .main-nav__list {
@@ -37,10 +29,22 @@
   text-transform: uppercase;
   text-align: center;
   list-style: none;
+}
 
-  &--active {
-    display: block;
-  }
+.main-nav--toggled .main-nav__toggle {
+  background: url("../img/icon-close.svg") 50% 50% no-repeat;
+}
+
+.main-nav--toggled .main-nav__list {
+  display: block;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__list {
+  display: block;
 }
 
 .main-nav__item {
@@ -59,12 +63,22 @@
   color: $color-black1;
 }
 
+.main-nav__link:hover {
+  opacity: 0.6;
+
+  transition: 200ms ease-out;
+}
+
+.main-nav__link:active {
+  opacity: 0.3;
+}
+
 @media (min-width: $tablet-width) {
   .main-nav__toggle {
     display: none;
   }
 
-  .main-nav__list {
+  .main-nav .main-nav__list {
     display: flex;
     flex-wrap: wrap;
   }
