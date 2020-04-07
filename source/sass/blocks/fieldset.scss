@@ -97,8 +97,9 @@
   height: 150px;
 
   &:focus {
-    padding-left: 19px;
-    padding-top: 15px;
+    padding-left: 14px;
+    padding-top: 12px;
+    padding-right: 11px;
     outline: none;
     border: 2px solid $color-grey2;
   }
@@ -325,6 +326,14 @@
   .fieldset__textarea {
     font-size: 20px;
     line-height: 1;
+
+    &:focus {
+      padding-left: 14px;
+    }
+
+    &:not(:placeholder-shown):not(:focus):invalid {
+      padding-left: 14px;
+    }
   }
 
   .fieldset__textarea {
@@ -332,6 +341,15 @@
     width: 631px;
     height: 174px;
     margin-bottom: -13px;
+
+    &:focus {
+      padding-left: 19px;
+      padding-top: 15px;
+    }
+
+    &:not(:placeholder-shown):not(:focus):invalid {
+      padding: 14px;
+    }
   }
 
   .fieldset__label--radio,
