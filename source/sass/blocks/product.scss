@@ -57,7 +57,7 @@
 
 .product__img img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .product__button {
@@ -76,13 +76,12 @@
     border: none;
 
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
   }
 
   .product__wrapper {
     margin-bottom: 33px;
-    order: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,8 +89,10 @@
 
   .product__img {
     margin-bottom: 36px;
+    display: flex;
+    flex-direction: column-reverse;
     width: 324px;
-    height: auto;
+    height: 208px;
   }
 
   .product__title {
@@ -120,7 +121,6 @@
   }
 
   .product__button {
-    order: 1;
     width: 249px;
   }
 }
@@ -146,6 +146,6 @@
   .product__img {
     margin-bottom: 35px;
     width: 245px;
-    height: auto;
+    height: 208px;
   }
 }
