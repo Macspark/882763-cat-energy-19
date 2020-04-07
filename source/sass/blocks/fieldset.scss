@@ -238,7 +238,7 @@
 .fieldset__label--radio:hover::before,
 .fieldset__label--checkbox:hover::before {
   border-color: $color-white2;
-  transition: 200ms ease-out;
+  transition: border-color 200ms ease-out;
 }
 
 .fieldset__label--radio:active,
