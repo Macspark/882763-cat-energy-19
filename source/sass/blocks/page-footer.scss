@@ -28,7 +28,7 @@
 
 @media (min-width: $tablet-width) {
   .page-footer__wrapper {
-    padding-top: 26px;
+    padding-top: 22px;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -40,5 +40,11 @@
   .page-footer__logo img {
     width: 128px;
     height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__wrapper {
+    padding-top: 26px;
   }
 }

@@ -5,7 +5,11 @@
 
 .catalog__wrapper {
   @include container-size;
+}
+
+.catalog__title-wrapper {
   @include container-padding;
+  @include container-size;
 }
 
 .catalog__title {
@@ -30,6 +34,14 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog__wrapper {
+    @include container-padding;
+  }
+
+  .catalog__title-wrapper {
+    padding: 0;
+  }
+
   .catalog__title {
     margin-top: 53px;
     margin-bottom: 81px;
