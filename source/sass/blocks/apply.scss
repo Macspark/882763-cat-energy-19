@@ -9,7 +9,7 @@
 }
 
 .apply__cat-info {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .apply__title {
@@ -61,10 +61,6 @@
   }
 }
 
-.apply__cat-info {
-  margin-bottom: 28px;
-}
-
 @media (min-width: $tablet-width) {
   .apply__title {
     margin-top: 53px;
@@ -75,7 +71,7 @@
   }
 
   .apply__cat-info {
-    margin-bottom: 70px;
+    margin-bottom: 62px;
   }
 
   .apply__text {
@@ -92,10 +88,6 @@
     &--longermargin {
       margin-bottom: 65px;
     }
-  }
-
-  .apply__cat-info {
-    margin-bottom: 62px;
   }
 
   .apply__wrapper:last-of-type {
