@@ -1,6 +1,6 @@
 @import "base/fonts.scss";
 @import "base/normalize.scss";
-@import "base/page.scss";
+@import "base/base.scss";
 @import "variables.scss";
 @import "base/visually-hidden.scss";
 @import "mixins/container.scss";
@@ -11,12 +11,15 @@
 @import "blocks/programs.scss";
 @import "blocks/advantage.scss";
 @import "blocks/example.scss";
+@import "blocks/stats.scss";
+@import "blocks/change.scss";
 @import "blocks/contact.scss";
 @import "blocks/catalog.scss";
 @import "blocks/product.scss";
 @import "blocks/see-more.scss";
 @import "blocks/additional.scss";
 @import "blocks/add-product.scss";
+@import "blocks/bonus.scss";
 @import "blocks/apply.scss";
 @import "blocks/fieldset.scss";
 @import "blocks/page-footer.scss";

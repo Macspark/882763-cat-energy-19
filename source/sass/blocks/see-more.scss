@@ -1,7 +1,8 @@
 .see-more {
-  @include container-padding;
   padding-top: 25px;
   padding-bottom: 24px;
+
+  width: 100%;
 
   border: 1px solid $color-grey3;
 
@@ -12,6 +13,13 @@
 
 .see-more__img {
   opacity: 0.2;
+  width: 31px;
+  height: 31px;
+}
+
+.see-more__img img {
+  height: 100%;
+  width: 100%;
 }
 
 .see-more__title {
@@ -39,4 +47,50 @@
   line-height: 1.25;
   background-color: $color-background;
   color: $color-grey2;
+}
+
+@media (min-width: $tablet-width) {
+  .see-more {
+    margin-top: 84px;
+    padding-top: 55px;
+    width: 324px;
+    height: 431px;
+  }
+
+  .see-more__img {
+    width: 61px;
+    height: 61px;
+  }
+
+  .see-more__title {
+    margin-top: 47px;
+    margin-bottom: 25px;
+    width: 135px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .see-more__small {
+    margin-bottom: 85px;
+    width: 175px;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .see-more__button {
+    width: 249px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .see-more {
+    width: 245px;
+  }
+
+  .see-more__button {
+    width: 169px;
+  }
 }

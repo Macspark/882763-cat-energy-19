@@ -2,9 +2,19 @@
   @include container-size;
   @include container-padding;
   margin-bottom: 34px;
+
+  &:last-of-type {
+    margin-bottom: 31px;
+  }
+}
+
+.apply__cat-info {
+  margin-bottom: 25px;
 }
 
 .apply__title {
+  @include center-text;
+
   margin-top: 17px;
 
   font-size: 36px;
@@ -14,7 +24,7 @@
 }
 
 .apply__text {
-  width: 230px;
+  @include center-text;
 
   font-size: 14px;
   text-transform: uppercase;
@@ -24,7 +34,8 @@
 
 .apply__button {
   @include button;
-  margin-bottom: 23px;
+  @include center-text;
+  margin-bottom: 22px;
 
   font-size: 16px;
   line-height: 1.25;
@@ -45,5 +56,94 @@
 
   &:last-of-type {
     margin-bottom: 18px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .apply__title {
+    margin-top: 53px;
+    margin-bottom: 55px;
+
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  .apply__cat-info {
+    margin-bottom: 70px;
+  }
+
+  .apply__text {
+    margin-bottom: 60px;
+    padding-left: 40px;
+
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .apply__fieldset {
+    margin-bottom: 62px;
+
+    &--shortermargin {
+      margin-bottom: 50px;
+    }
+  }
+
+  .apply__wrapper:last-of-type {
+    margin-top: -13px;
+    margin-bottom: 49px;
+    width: $tablet-width;
+    display: flex;
+  }
+
+  .apply__small {
+    padding-top: 16px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .apply__button {
+    margin-left: 40px;
+    margin-right: 62px;
+    width: 283px;
+    height: 52px;
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .apply__title {
+    margin-top: 68px;
+  }
+
+  .apply__text {
+    margin-bottom: 66px;
+    padding: 0;
+  }
+
+  .apply__cat-info {
+    @include container-size;
+    @include container-padding;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .apply__cat-info .apply__fieldset {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 570px;
+  }
+
+  .apply__wrapper:last-of-type {
+    margin-bottom: 60px;
+    padding: 17px 0 0;
+    width: 100%;
+  }
+
+  .apply__button {
+    margin-right: 83px;
+    width: 568px;
   }
 }
