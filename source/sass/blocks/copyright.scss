@@ -19,6 +19,7 @@
 
 .copyright:hover svg {
   fill: $color-leaf;
+  transition: 200ms ease-out;
 }
 
 .copyright:active {

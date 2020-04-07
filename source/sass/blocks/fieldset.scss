@@ -72,6 +72,7 @@
 
   &:hover {
     border-color: $color-white2;
+    transition: 200ms ease-out;
   }
 
   &:focus {
@@ -139,11 +140,13 @@
 .fieldset__input:focus + .fieldset__mail-icon,
 .fieldset__input:focus + .fieldset__phone-icon {
   fill: $color-leaf;
+  transition: 200ms ease-out;
 }
 
 .fieldset__input:not(:placeholder-shown):not(:focus):invalid + .fieldset__mail-icon,
 .fieldset__input:not(:placeholder-shown):not(:focus):invalid + .fieldset__phone-icon {
   fill: $color-red;
+  transition: 200ms ease-out;
 }
 
 .fieldset__mail-icon {
@@ -235,11 +238,13 @@
 .fieldset__label--radio:hover::before,
 .fieldset__label--checkbox:hover::before {
   border-color: $color-white2;
+  transition: 200ms ease-out;
 }
 
 .fieldset__label--radio:active,
 .fieldset__label--checkbox:active {
   opacity: 0.3;
+  transition: 200ms ease-out;
 }
 
 .fieldset__legend {
