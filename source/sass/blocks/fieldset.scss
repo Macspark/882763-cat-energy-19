@@ -1,47 +1,42 @@
 .fieldset {
-  @include container-size;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+
   position: relative;
-  padding-left: 0;
-  padding-right: 0;
+
   border: none;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 280px;
-
-  &--greenlined::after {
-    position: absolute;
-    top: 19px;
-    right: -20px;
-
-    display: block;
-
-    content: "";
-    width: $phone-width;
-    height: 3px;
-
-    background-color: $color-leaf;
-  }
 
   &--bordered {
     padding-top: 25px;
-
-    width: 100%;
-
+    padding-bottom: 13px;
     border: 1px solid $color-white2-50;
   }
+}
+
+.fieldset__wrapper {
+  @include container-size;
+  @include container-padding;
+}
+
+.fieldset--greenlined .fieldset__wrapper::after {
+  position: absolute;
+  top: 14px;
+  left: 0;
+
+  display: block;
+
+  content: "";
+  width: 100%;
+  height: 3px;
+
+  background-color: $color-leaf;
 }
 
 .fieldset__list {
   margin: 0;
   padding: 0;
   list-style: none;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .fieldset__item {
@@ -52,7 +47,7 @@
   align-items: center;
 
   &--shortermargin {
-    margin-bottom: 13px;
+    margin-bottom: 12px;
   }
 
   &:last-of-type {
@@ -88,12 +83,13 @@
 }
 
 .fieldset__textarea {
+  margin-bottom: 6px;
   padding: 15px;
   padding-top: 13px;
   padding-right: 12px;
 
   resize: none;
-  width: 280px;
+  width: 100%;
   height: 150px;
 
   &:focus {
@@ -113,8 +109,8 @@
 .fieldset__input {
   padding: 15px;
 
-  flex-grow: 1;
   height: 45px;
+  flex-grow: 1;
 }
 
 .fieldset__item--email .fieldset__input,
@@ -166,7 +162,7 @@
 .fieldset__label {
   position: relative;
 
-  margin-right: 9px;
+  margin-right: 13px;
 
   font-size: 16px;
   text-transform: uppercase;
@@ -183,7 +179,7 @@
   margin: 0 auto;
   padding-left: 45px;
 
-  width: 280px;
+  width: 100%;
   min-height: 30px;
 }
 
@@ -261,8 +257,8 @@
 
   z-index: 2;
 
-  &--bigmargin {
-    margin-bottom: 41px;
+  &--extra {
+    margin-bottom: 42px;
   }
 
   &::before {
@@ -280,19 +276,29 @@
 
 @media (min-width: $tablet-width) {
   .fieldset {
-    width: 630px;
+    padding-left: 2px;
   }
 
   .fieldset--bordered {
-    padding-top: 31px;
-    padding-left: 28px;
-    padding-bottom: 24px;
+    @include container-padding;
+    border: none;
   }
 
-  .fieldset--greenlined::after {
-    top: 27px;
-    right: -69px;
-    width: $tablet-width;
+  .fieldset__wrapper {
+    width: 89.8%;
+  }
+
+  .fieldset--bordered .fieldset__wrapper {
+    padding-top: 32px;
+    padding-left: 28px;
+    padding-bottom: 24px;
+
+    width: 88.8%;
+    border: 1px solid $color-white2-50;
+  }
+
+  .fieldset--greenlined .fieldset__wrapper::after {
+    top: 22px;
   }
 
   .fieldset__legend {
@@ -300,6 +306,10 @@
     padding-right: 42px;
     font-size: 36px;
     max-width: 100%;
+
+    &--extra {
+      margin-bottom: 65px;
+    }
   }
 
   .fieldset__legend::before {
@@ -312,7 +322,7 @@
   }
 
   .fieldset__label {
-    margin-right: 20px;
+    margin-right: 16px;
     font-size: 20px;
     line-height: 1;
   }
@@ -337,9 +347,9 @@
 
   .fieldset__textarea {
     padding: 16px 20px;
-    width: 631px;
+    width: 100%;
     height: 174px;
-    margin-bottom: -13px;
+    margin-bottom: 16px;
 
     &:focus {
       padding-left: 19px;
@@ -383,13 +393,13 @@
     right: 18px;
   }
 
-  .fieldset__list--additional {
-    flex-direction: row;
+  .fieldset__list--extra {
+    display: flex;
     flex-wrap: wrap;
   }
 
-  .fieldset__list--additional .fieldset__item {
-    width: 280px;
+  .fieldset__list--extra .fieldset__item {
+    width: 44.2%;
     margin-right: 65px;
     margin-bottom: 42px;
 
@@ -417,27 +427,21 @@
 }
 
 @media (min-width: $desktop-width) {
-  .fieldset {
-    @include container-padding;
+  .fieldset--bordered {
     padding: 0;
-    width: 100%;
   }
 
-  .fieldset--bordered {
+  .fieldset--bordered .fieldset__wrapper {
     padding-top: 32px;
   }
 
-  .fieldset--bordered .fieldset__item {
-    width: 513px;
-  }
-
+  .fieldset--bordered .fieldset__wrapper,
   .fieldset__item {
     width: 570px;
   }
 
-  .fieldset::after {
+  .fieldset--greenlined .fieldset__wrapper::after {
     top: 21px;
-    width: 1440px;
   }
 
   .fieldset__list--contact {
@@ -454,17 +458,17 @@
   }
 
   .fieldset__textarea {
-    margin-bottom: 4px;
+    margin-bottom: 36px;
     width: 1220px;
     height: 174px;
   }
 
-  .fieldset__list--additional {
+  .fieldset__list--extra {
     width: 100%;
   }
 
-  .fieldset__list--additional .fieldset__item {
-    width: 220px;
+  .fieldset__list--extra .fieldset__item {
+    width: 17%;
     margin-right: 105px;
     margin-bottom: 42px;
 
