@@ -39,9 +39,9 @@
   font-size: 16px;
   text-transform: uppercase;
   line-height: 1.25;
+  color: $color-black1;
 
   cursor: pointer;
-  color: $color-black1;
 }
 
 .change__button {
@@ -58,6 +58,8 @@
   line-height: 1.25;
   text-transform: uppercase;
   color: $color-black1;
+
+  cursor: pointer;
 }
 
 .change__button-bar {
