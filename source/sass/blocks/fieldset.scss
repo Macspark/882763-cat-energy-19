@@ -243,14 +243,18 @@
   transition: 200ms ease-out;
 }
 
-.fieldset__legend {
+.fieldset__title {
   position: relative;
+  margin: 0;
   padding-right: 22px;
+
+  display: inline-block;
 
   max-width: 205px;
   margin-bottom: 34px;
 
   font-size: 24px;
+  font-weight: normal;
   line-height: 1;
   color: $color-black1;
   background-color: $color-white1;
@@ -301,7 +305,7 @@
     top: 22px;
   }
 
-  .fieldset__legend {
+  .fieldset__title {
     margin-bottom: 75px;
     padding-right: 42px;
     font-size: 36px;
@@ -312,7 +316,7 @@
     }
   }
 
-  .fieldset__legend::before {
+  .fieldset__title::before {
     left: -40px;
     width: 40px;
   }
@@ -407,7 +411,7 @@
     }
   }
 
-  .fieldset__legend--bigmargin {
+  .fieldset__title--bigmargin {
     margin-bottom: 64px;
   }
 

@@ -49,22 +49,6 @@
   line-height: 1.25;
   text-transform: uppercase;
   color: $color-black1;
-
-  &::before {
-    position: absolute;
-    top: -4px;
-    left: -55px;
-    display: block;
-    content: "Было";
-  }
-
-  &::after {
-    position: absolute;
-    top: -4px;
-    right: -60px;
-    display: block;
-    content: "Стало";
-  }
 }
 
 .change__button-bar {
