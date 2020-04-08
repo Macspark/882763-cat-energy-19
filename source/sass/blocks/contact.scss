@@ -43,7 +43,7 @@
   background-image:
     url("../img/map-pin.png"),
     url("../img/bg-map-mobile@1x.png");
-  background-position: center 139px, 0 -38px;
+  background-position: center 158px, center;
   background-size: 62px 53px, 100%;
 }
 
@@ -69,6 +69,11 @@
 
   .contact__map {
     height: 400px;
+
+    background-image:
+      url("../img/map-pin.png"),
+      url("../img/bg-map-tablet@1x.png");
+    background-position: center 225px, center;
   }
 }
 
@@ -93,5 +98,13 @@
 
   .contact__text {
     text-align: left;
+  }
+
+  .contact__map {
+    background-image:
+      url("../img/map-pin.png"),
+      url("../img/bg-map-desktop@1x.png");
+    background-size: 113px 106px, 100%;
+    background-position: 75.5% 155px, center;
   }
 }
