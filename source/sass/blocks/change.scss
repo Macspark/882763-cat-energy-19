@@ -1,5 +1,5 @@
 .change {
-  padding-bottom: 40px;
+  padding-bottom: 37px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,7 +7,7 @@
 
 .change__wrapper {
   position: relative;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
   width: 320px;
   height: 240px;
 }
@@ -18,7 +18,7 @@
   width: 100%;
   height: 100%;
 
-  &--active {
+  &--before {
     display: block;
   }
 }
@@ -33,6 +33,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.change__label {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.25;
+
+  cursor: pointer;
+  color: $color-black1;
 }
 
 .change__button {
@@ -52,19 +61,41 @@
 }
 
 .change__button-bar {
+  margin: 0 18px;
+}
+
+.change__button::after {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+
+  display: block;
+  content: "";
   width: 35px;
   height: 6px;
+
   border-radius: 3px;
   background-color: $color-leaf;
+}
 
-  &--switched {
-    transform: translateX(36px);
+.change--switched .change__img {
+  &--before {
+    display: none;
   }
+
+  &--after {
+    display: block;
+  }
+}
+
+.change--switched .change__button::after {
+  left: auto;
+  right: 6px;
 }
 
 @media (min-width: $tablet-width) {
   .change {
-    padding-bottom: 67px;
+    padding-bottom: 72px;
 
     display: flex;
     flex-direction: column;
@@ -73,7 +104,7 @@
 
   .change__wrapper {
     padding: 0 7px;
-    margin-bottom: 13px;
+    margin-bottom: 16px;
 
     width: 690px;
     height: 517px;
@@ -88,6 +119,11 @@
   }
 
   .change__button {
+    position: absolute;
+    top: -14px;
+    left: 0;
+    right: auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,7 +134,31 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   }
 
+  .change--switched .change__button {
+    left: auto;
+    right: 0;
+  }
+
   .change__button-bar {
+    position: relative;
+    margin: 0 23px;
+
+    width: 426px;
+    height: 6px;
+
+    border-radius: 2.5px;
+    background-color: $color-grey6;
+  }
+
+  .change__label {
+    font-size: 20px;
+  }
+
+  .change .change__button::after {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
     width: 8px;
     height: 8px;
   }
@@ -106,6 +166,15 @@
 
 @media (min-width: $desktop-width) {
   .change {
+    padding-bottom: 51px;
     background: none;
+  }
+
+  .change__switch {
+    margin-left: 57px;
+  }
+
+  .change__wrapper {
+    margin-bottom: 39px;
   }
 }

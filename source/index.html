@@ -131,7 +131,7 @@
 
           <div class="example__change change">
             <div class="change__wrapper">
-              <div class="change__img change__img--before change__img--active">
+              <div class="change__img change__img--before">
                 <picture>
                   <source srcset="./img/before-desktop@1x.png" media="(min-width: 1300px)">
                   <source srcset="./img/before-tablet@1x.png" media="(min-width: 768px)">
@@ -147,9 +147,11 @@
               </div>
             </div>
             <div class="change__switch">
-              <button class="change__button-before" type="button">Было</button>
-              <button class="change__button" type="button"></button>
-              <button class="change__button-after" type="button">Стало</button>
+              <label class="change__label change__label--before">Было</label>
+              <div class="change__button-bar">
+                <button class="change__button" type="button"></button>
+              </div>
+              <label class="change__label change__label--after">Стало</label>
             </div>
           </div>
 
@@ -218,6 +220,7 @@
 
   <script src="https://api-maps.yandex.ru/2.1?bab3bdb3-8438-46cd-a063-248910568936&load=package.full&lang=ru_RU"></script>
   <script src="./js/menu.js"></script>
+  <script src="./js/boris.js"></script>
   <script src="./js/map.js"></script>
   </body>
 </html>
