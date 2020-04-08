@@ -36,12 +36,41 @@
 }
 
 .change__label {
+  position: relative;
+
   font-size: 16px;
   text-transform: uppercase;
   line-height: 1.25;
   color: $color-black1;
 
   cursor: pointer;
+}
+
+.change__label::after {
+  position: absolute;
+
+  left: 2%;
+  bottom: -2px;
+
+  display: none;
+  content: "";
+  width: 95%;
+  height: 1px;
+
+  border-bottom: 1px dotted $color-black1;
+  opacity: 0.23;
+}
+
+.change__label:hover::after {
+  display: block;
+  border-bottom-style: solid;
+  opacity: 0.4;
+
+  transition: 200ms ease-out;
+}
+
+.change__label:active::after {
+  display: none;
 }
 
 .change__button {
@@ -132,8 +161,19 @@
     width: 34px;
     height: 34px;
 
+    outline: none;
     border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .change__button:hover {
+    box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
+    transition: 200ms ease-out;
+  }
+
+  .change__button:active {
+    box-shadow: 0px 4px 5px 0 rgba(0, 0, 0, 0.25);
+    border: 2px solid $color-leaf;
   }
 
   .change--switched .change__button {
@@ -154,6 +194,10 @@
 
   .change__label {
     font-size: 20px;
+  }
+
+  .change__label::after {
+    display: block;
   }
 
   .change .change__button::after {
