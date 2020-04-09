@@ -14,12 +14,14 @@
 
 .change__img {
   position: absolute;
-  display: none;
+  transform: scaleX(0);
   width: 100%;
   height: 100%;
 
+  transition: 500ms ease;
+
   &--before {
-    display: block;
+    transform: scaleX(0);
   }
 }
 
@@ -89,6 +91,7 @@
   color: $color-black1;
 
   cursor: pointer;
+  transition: 500ms ease;
 }
 
 .change__button-bar {
@@ -107,21 +110,22 @@
 
   border-radius: 3px;
   background-color: $color-leaf;
+
+  transition: 200ms ease;
 }
 
 .change--switched .change__img {
   &--before {
-    display: none;
+    transform: scaleX(0);
   }
 
   &--after {
-    display: block;
+    transform: scaleX(1);
   }
 }
 
 .change--switched .change__button::after {
-  left: auto;
-  right: 6px;
+  transform: translateX(100%);
 }
 
 @media (min-width: $tablet-width) {
@@ -142,11 +146,11 @@
   }
 
   .change__img {
-    display: block;
+    transform: scaleX(1);
   }
 
   .change__img--after {
-    display: none;
+    transform: scaleX(0);
   }
 
   .change__button {
@@ -177,8 +181,7 @@
   }
 
   .change--switched .change__button {
-    left: auto;
-    right: 0;
+    transform: translateX(400px);
   }
 
   .change__button-bar {
@@ -205,6 +208,7 @@
     left: auto;
     right: auto;
     bottom: auto;
+    transform: translate(0);
     width: 8px;
     height: 8px;
   }
