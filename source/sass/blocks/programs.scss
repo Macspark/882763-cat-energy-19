@@ -99,9 +99,11 @@
     display: inline-block;
 
     content: "";
-    width: 25px;
+    width: 34px;
     height: 12px;
-    background: url("../img/icon-right-arrow-long.svg") no-repeat;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+    background-position: -10px center;
 
     transition: 200ms ease-out;
   }
@@ -110,7 +112,7 @@
 .programs__button:hover::after,
 .programs__button:focus::after {
   width: 34px;
-  background-image: url("../img/icon-right-arrow-verylong.svg");
+  background-position: center;
 }
 
 .programs__button:active {

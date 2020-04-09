@@ -5,6 +5,9 @@
 .contact__wrapper {
   @include container-size;
   @include container-padding;
+}
+
+.contact__info {
   padding-top: 11px;
   padding-bottom: 10px;
 
@@ -48,11 +51,11 @@
 }
 
 @media (min-width: $tablet-width) {
-  .contact__wrapper {
+  .contact__info {
     padding-top: 43px;
     padding-bottom: 39px;
-    padding-left: 72px;
-    padding-right: 72px;
+    padding-left: 40px;
+    padding-right: 43px;
   }
 
   .contact__title {
@@ -84,16 +87,20 @@
 
   .contact__wrapper {
     position: absolute;
-    left: 182px;
     top: 95px;
+    left: 0;
+    right: 0;
 
-    padding-left: 75px;
-    padding-right: 65px;
-
-    width: 570px;
-    background-color: $color-white1;
+    width: 100%;
 
     z-index: 1;
+  }
+
+  .contact__info {
+    padding-left: 75px;
+    padding-right: 65px;
+    width: 570px;
+    background-color: $color-white1;
   }
 
   .contact__text {
