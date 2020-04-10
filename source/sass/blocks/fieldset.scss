@@ -1,48 +1,42 @@
 .fieldset {
-  @include container-size;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+
   position: relative;
-  padding-left: 0;
-  padding-right: 0;
+
   border: none;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 280px;
-
-
-  &--greenlined::after {
-    position: absolute;
-    top: 19px;
-    right: -20px;
-
-    display: block;
-
-    content: "";
-    width: $phone-width;
-    height: 3px;
-
-    background-color: $color-leaf;
-  }
 
   &--bordered {
     padding-top: 25px;
-
-    width: 100%;
-
-    border: 1px solid $color-grey3;
+    padding-bottom: 13px;
+    border: 1px solid $color-white2-50;
   }
+}
+
+.fieldset__wrapper {
+  @include container-size;
+  @include container-padding;
+}
+
+.fieldset--greenlined .fieldset__wrapper::after {
+  position: absolute;
+  top: 14px;
+  left: 0;
+
+  display: block;
+
+  content: "";
+  width: 100%;
+  height: 3px;
+
+  background-color: $color-leaf;
 }
 
 .fieldset__list {
   margin: 0;
   padding: 0;
   list-style: none;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .fieldset__item {
@@ -53,7 +47,7 @@
   align-items: center;
 
   &--shortermargin {
-    margin-bottom: 13px;
+    margin-bottom: 12px;
   }
 
   &:last-of-type {
@@ -63,49 +57,101 @@
 
 .fieldset__input,
 .fieldset__textarea {
-  border: 1px solid $color-white2;
+  border: 1px solid $color-white2-50;
 
   font-family: inherit;
   font-size: 16px;
   text-transform: uppercase;
   line-height: 1.13;
   color: $color-grey2;
+
+  &:hover {
+    border-color: $color-white2;
+    transition: 200ms ease-out;
+  }
+
+  &:focus {
+    padding-left: 14px;
+    outline: none;
+    border: 2px solid $color-grey2;
+  }
+
+  &:not(:placeholder-shown):not(:focus):invalid {
+    padding-left: 14px;
+    border: 2px solid $color-red;
+  }
 }
 
 .fieldset__textarea {
+  margin-bottom: 6px;
   padding: 15px;
   padding-top: 13px;
   padding-right: 12px;
 
   resize: none;
-  width: 280px;
+  width: 100%;
   height: 150px;
+
+  &:focus {
+    padding-left: 14px;
+    padding-top: 12px;
+    padding-right: 11px;
+    outline: none;
+    border: 2px solid $color-grey2;
+  }
+
+  &:not(:placeholder-shown):not(:focus):invalid {
+    padding: 14px;
+    border: 2px solid $color-red;
+  }
 }
 
 .fieldset__input {
   padding: 15px;
 
-  flex-grow: 1;
   height: 45px;
+  flex-grow: 1;
 }
 
-.fieldset__input--email,
-.fieldset__input--tel {
+.fieldset__item--email .fieldset__input,
+.fieldset__item--tel .fieldset__input {
   padding-right: 40px;
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
 }
 
-.fieldset__input--email {
-  background-image: url("../img/icon-mail.svg");
-  background-size: 18px 14px;
-  background-position: 93% center;
+.fieldset__item--email,
+.fieldset__item--tel {
+  position: relative;
 }
 
-.fieldset__input--tel {
-  background-image: url("../img/icon-phone.svg");
-  background-size: 21px 21px;
-  background-position: 94% center;
+.fieldset__mail-icon,
+.fieldset__phone-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  pointer-events: none;
+
+  fill: $color-black2;
+}
+
+.fieldset__input:focus + .fieldset__mail-icon,
+.fieldset__input:focus + .fieldset__phone-icon {
+  fill: $color-leaf;
+  transition: 200ms ease-out;
+}
+
+.fieldset__input:not(:placeholder-shown):not(:focus):invalid + .fieldset__mail-icon,
+.fieldset__input:not(:placeholder-shown):not(:focus):invalid + .fieldset__phone-icon {
+  fill: $color-red;
+  transition: 200ms ease-out;
+}
+
+.fieldset__mail-icon {
+  right: 15px;
+}
+
+.fieldset__phone-icon {
+  right: 13px;
 }
 
 .fieldset__radio,
@@ -116,8 +162,7 @@
 .fieldset__label {
   position: relative;
 
-  margin-right: 14px;
-  white-space: pre;
+  margin-right: 13px;
 
   font-size: 16px;
   text-transform: uppercase;
@@ -134,7 +179,7 @@
   margin: 0 auto;
   padding-left: 45px;
 
-  width: 280px;
+  width: 100%;
   min-height: 30px;
 }
 
@@ -148,7 +193,7 @@
   width: 30px;
   height: 30px;
 
-  border: 1px solid $color-white2;
+  border: 1px solid $color-black3;
   border-radius: 50%;
 }
 
@@ -176,7 +221,7 @@
   width: 30px;
   height: 30px;
 
-  border: 1px solid $color-white2;
+  border: 1px solid $color-black3;
 }
 
 .fieldset__checkbox:checked + .fieldset__label--checkbox::before {
@@ -186,22 +231,38 @@
   background-size: 22px 17px;
 }
 
-.fieldset__legend {
+.fieldset__label--radio:hover::before,
+.fieldset__label--checkbox:hover::before {
+  border-color: $color-white2;
+  transition: border-color 200ms ease-out;
+}
+
+.fieldset__label--radio:active,
+.fieldset__label--checkbox:active {
+  opacity: 0.3;
+  transition: 200ms ease-out;
+}
+
+.fieldset__title {
   position: relative;
+  margin: 0;
   padding-right: 22px;
+
+  display: inline-block;
 
   max-width: 205px;
   margin-bottom: 34px;
 
   font-size: 24px;
+  font-weight: normal;
   line-height: 1;
   color: $color-black1;
   background-color: $color-white1;
 
   z-index: 2;
 
-  &--bigmargin {
-    margin-bottom: 41px;
+  &--extra {
+    margin-bottom: 42px;
   }
 
   &::before {
@@ -219,29 +280,43 @@
 
 @media (min-width: $tablet-width) {
   .fieldset {
-    width: 630px;
+    padding-left: 2px;
   }
 
   .fieldset--bordered {
-    padding-top: 31px;
+    @include container-padding;
+    border: none;
+  }
+
+  .fieldset__wrapper {
+    width: 89.8%;
+  }
+
+  .fieldset--bordered .fieldset__wrapper {
+    padding-top: 32px;
     padding-left: 28px;
     padding-bottom: 24px;
+
+    width: 88.8%;
+    border: 1px solid $color-white2-50;
   }
 
-  .fieldset--greenlined::after {
-    top: 27px;
-    right: -69px;
-    width: $tablet-width;
+  .fieldset--greenlined .fieldset__wrapper::after {
+    top: 22px;
   }
 
-  .fieldset__legend {
+  .fieldset__title {
     margin-bottom: 75px;
     padding-right: 42px;
     font-size: 36px;
     max-width: 100%;
+
+    &--extra {
+      margin-bottom: 65px;
+    }
   }
 
-  .fieldset__legend::before {
+  .fieldset__title::before {
     left: -40px;
     width: 40px;
   }
@@ -251,7 +326,7 @@
   }
 
   .fieldset__label {
-    margin-right: 20px;
+    margin-right: 16px;
     font-size: 20px;
     line-height: 1;
   }
@@ -264,23 +339,30 @@
   .fieldset__textarea {
     font-size: 20px;
     line-height: 1;
+
+    &:focus {
+      padding-left: 14px;
+    }
+
+    &:not(:placeholder-shown):not(:focus):invalid {
+      padding-left: 14px;
+    }
   }
 
   .fieldset__textarea {
     padding: 16px 20px;
-    width: 631px;
     height: 174px;
-    margin-bottom: -13px;
-  }
+    margin-bottom: 16px;
 
-  .fieldset__input--email {
-    background-position: 97% center;
-  }
+    &:focus {
+      padding-left: 19px;
+      padding-top: 15px;
+    }
 
-  .fieldset__input--tel {
-    background-position: 98% center;
+    &:not(:placeholder-shown):not(:focus):invalid {
+      padding: 14px;
+    }
   }
-
 
   .fieldset__label--radio,
   .fieldset__label--checkbox {
@@ -306,13 +388,21 @@
     height: 18px;
   }
 
-  .fieldset__list--additional {
-    flex-direction: row;
+  .fieldset__mail-icon {
+    right: 20px;
+  }
+
+  .fieldset__phone-icon {
+    right: 18px;
+  }
+
+  .fieldset__list--extra {
+    display: flex;
     flex-wrap: wrap;
   }
 
-  .fieldset__list--additional .fieldset__item {
-    width: 280px;
+  .fieldset__list--extra .fieldset__item {
+    width: 44.2%;
     margin-right: 65px;
     margin-bottom: 42px;
 
@@ -321,7 +411,7 @@
     }
   }
 
-  .fieldset__legend--bigmargin {
+  .fieldset__title--bigmargin {
     margin-bottom: 64px;
   }
 
@@ -340,27 +430,25 @@
 }
 
 @media (min-width: $desktop-width) {
-  .fieldset {
-    @include container-padding;
+  .fieldset--bordered {
     padding: 0;
+  }
+
+  .fieldset__wrapper {
     width: 100%;
   }
 
-  .fieldset--bordered {
+  .fieldset--bordered .fieldset__wrapper {
     padding-top: 32px;
   }
 
-  .fieldset--bordered .fieldset__item {
-    width: 513px;
-  }
-
+  .fieldset--bordered .fieldset__wrapper,
   .fieldset__item {
     width: 570px;
   }
 
-  .fieldset::after {
+  .fieldset--greenlined .fieldset__wrapper::after {
     top: 21px;
-    width: 1440px;
   }
 
   .fieldset__list--contact {
@@ -376,25 +464,16 @@
     margin-bottom: 0;
   }
 
-  .fieldset__input--email {
-    background-position: 96% center;
-  }
-
-  .fieldset__input--tel {
-    background-position: 96% center;
-  }
-
   .fieldset__textarea {
-    margin-bottom: 4px;
-    width: 1220px;
+    margin-bottom: 36px;
     height: 174px;
   }
 
-  .fieldset__list--additional {
+  .fieldset__list--extra {
     width: 100%;
   }
 
-  .fieldset__list--additional .fieldset__item {
+  .fieldset__list--extra .fieldset__item {
     width: 220px;
     margin-right: 105px;
     margin-bottom: 42px;

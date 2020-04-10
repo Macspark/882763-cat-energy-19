@@ -13,8 +13,17 @@
   color: $color-grey2;
 }
 
-.copyright__img {
-  opacity: 0.6;
+.copyright svg {
+  fill: $color-grey5;
+}
+
+.copyright:hover svg {
+  fill: $color-leaf;
+  transition: 200ms ease-out;
+}
+
+.copyright:active {
+  opacity: 0.4;
 }
 
 @media (min-width: $tablet-width) {

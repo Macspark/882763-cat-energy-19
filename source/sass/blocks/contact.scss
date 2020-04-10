@@ -5,6 +5,9 @@
 .contact__wrapper {
   @include container-size;
   @include container-padding;
+}
+
+.contact__info {
   padding-top: 11px;
   padding-bottom: 10px;
 
@@ -43,16 +46,16 @@
   background-image:
     url("../img/map-pin.png"),
     url("../img/bg-map-mobile@1x.png");
-  background-position: center 139px, 0 -38px;
+  background-position: center 158px, center;
   background-size: 62px 53px, 100%;
 }
 
 @media (min-width: $tablet-width) {
-  .contact__wrapper {
+  .contact__info {
     padding-top: 43px;
     padding-bottom: 39px;
-    padding-left: 72px;
-    padding-right: 72px;
+    padding-left: 40px;
+    padding-right: 43px;
   }
 
   .contact__title {
@@ -69,6 +72,11 @@
 
   .contact__map {
     height: 400px;
+
+    background-image:
+      url("../img/map-pin.png"),
+      url("../img/bg-map-tablet@1x.png");
+    background-position: center 225px, center;
   }
 }
 
@@ -79,23 +87,31 @@
 
   .contact__wrapper {
     position: absolute;
-    left: 182px;
     top: 95px;
+    left: 0;
+    right: 0;
 
-    padding-left: 75px;
-    padding-right: 65px;
-
-    width: 570px;
-    background-color: $color-white1;
+    width: 100%;
 
     z-index: 1;
   }
 
-  .contact__map {
-    margin-bottom: 3px;
+  .contact__info {
+    padding-left: 75px;
+    padding-right: 65px;
+    width: 570px;
+    background-color: $color-white1;
   }
 
   .contact__text {
     text-align: left;
+  }
+
+  .contact__map {
+    background-image:
+      url("../img/map-pin.png"),
+      url("../img/bg-map-desktop@1x.png");
+    background-size: 113px 106px, 100%;
+    background-position: 75.5% 155px, center;
   }
 }

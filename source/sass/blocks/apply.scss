@@ -4,17 +4,15 @@
   margin-bottom: 34px;
 
   &:last-of-type {
-    margin-bottom: 31px;
+    margin-bottom: 32px;
   }
 }
 
 .apply__cat-info {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .apply__title {
-  @include center-text;
-
   margin-top: 17px;
 
   font-size: 36px;
@@ -24,7 +22,7 @@
 }
 
 .apply__text {
-  @include center-text;
+  margin-bottom: 39px;
 
   font-size: 14px;
   text-transform: uppercase;
@@ -34,7 +32,8 @@
 
 .apply__button {
   @include button;
-  @include center-text;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 22px;
 
   font-size: 16px;
@@ -52,10 +51,14 @@
 }
 
 .apply__fieldset {
-  margin-bottom: 12px;
+  margin-bottom: 23px;
+
+  &--longermargin {
+    margin-bottom: 26px;
+  }
 
   &:last-of-type {
-    margin-bottom: 18px;
+    margin-bottom: 28px;
   }
 }
 
@@ -69,11 +72,11 @@
   }
 
   .apply__cat-info {
-    margin-bottom: 70px;
+    margin-bottom: 62px;
   }
 
   .apply__text {
-    margin-bottom: 60px;
+    margin-bottom: 65px;
     padding-left: 40px;
 
     font-size: 20px;
@@ -81,10 +84,10 @@
   }
 
   .apply__fieldset {
-    margin-bottom: 62px;
+    margin-bottom: 48px;
 
-    &--shortermargin {
-      margin-bottom: 50px;
+    &--longermargin {
+      margin-bottom: 65px;
     }
   }
 
@@ -112,6 +115,14 @@
 }
 
 @media (min-width: $desktop-width) {
+  .apply__fieldset {
+    margin-bottom: 30px;
+
+    &--longermargin {
+      margin-bottom: 50px;
+    }
+  }
+
   .apply__title {
     margin-top: 68px;
   }
@@ -125,18 +136,20 @@
     @include container-size;
     @include container-padding;
 
+    margin-bottom: 40px;
+
     display: flex;
     justify-content: space-between;
   }
 
-  .apply__cat-info .apply__fieldset {
+  .apply__cat-info .fieldset__wrapper {
     margin: 0;
     padding-left: 0;
     padding-right: 0;
-    width: 570px;
   }
 
   .apply__wrapper:last-of-type {
+    margin-top: -24px;
     margin-bottom: 60px;
     padding: 17px 0 0;
     width: 100%;

@@ -14,7 +14,6 @@
 
 .social__item {
   margin: 0 18px;
-  opacity: 0.6;
 
   &:first-of-type {
     margin-left: 0;
@@ -23,6 +22,19 @@
   &:last-of-type {
     margin-right: 8px;
   }
+}
+
+.social__link:hover svg {
+  fill: $color-leaf;
+  transition: 200ms ease-out;
+}
+
+.social__link:active svg {
+  opacity: 0.4;
+}
+
+.social__item svg {
+  fill: $color-grey5;
 }
 
 @media (min-width: $tablet-width) {
@@ -43,17 +55,17 @@
     }
   }
 
-  .social__link--vk img {
+  .social__link--vk svg {
     width: 30px;
     height: 16px;
   }
 
-  .social__link--insta img {
+  .social__link--insta svg {
     width: 23px;
     height: 23px;
   }
 
-  .social__link--fb img {
+  .social__link--fb svg {
     width: 14px;
     height: 28px;
   }

@@ -1,5 +1,5 @@
 .change {
-  padding-bottom: 40px;
+  padding-bottom: 37px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,19 +7,21 @@
 
 .change__wrapper {
   position: relative;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
   width: 320px;
   height: 240px;
 }
 
 .change__img {
   position: absolute;
-  display: none;
+  transform: scaleX(0);
   width: 100%;
   height: 100%;
 
-  &--active {
-    display: block;
+  transition: 500ms ease;
+
+  &--before {
+    transform: scaleX(1);
   }
 }
 
@@ -33,6 +35,44 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.change__label {
+  position: relative;
+
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.25;
+  color: $color-black1;
+
+  cursor: pointer;
+}
+
+.change__label::after {
+  position: absolute;
+
+  left: 2%;
+  bottom: -2px;
+
+  display: none;
+  content: "";
+  width: 95%;
+  height: 1px;
+
+  border-bottom: 1px dotted $color-black1;
+  opacity: 0.23;
+}
+
+.change__label:hover::after {
+  display: block;
+  border-bottom-style: solid;
+  opacity: 0.4;
+
+  transition: 200ms ease-out;
+}
+
+.change__label:active::after {
+  display: none;
 }
 
 .change__button {
@@ -50,37 +90,47 @@
   text-transform: uppercase;
   color: $color-black1;
 
-  &::before {
-    position: absolute;
-    top: -4px;
-    left: -55px;
-    display: block;
-    content: "Было";
-  }
-
-  &::after {
-    position: absolute;
-    top: -4px;
-    right: -60px;
-    display: block;
-    content: "Стало";
-  }
+  cursor: pointer;
+  transition: 500ms ease;
 }
 
 .change__button-bar {
+  margin: 0 18px;
+}
+
+.change__button::after {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+
+  display: block;
+  content: "";
   width: 35px;
   height: 6px;
+
   border-radius: 3px;
   background-color: $color-leaf;
 
-  &--switched {
-    transform: translateX(36px);
+  transition: 200ms ease;
+}
+
+.change--switched .change__img {
+  &--before {
+    transform: scaleX(0);
   }
+
+  &--after {
+    transform: scaleX(1);
+  }
+}
+
+.change--switched .change__button::after {
+  transform: translateX(100%);
 }
 
 @media (min-width: $tablet-width) {
   .change {
-    padding-bottom: 67px;
+    padding-bottom: 72px;
 
     display: flex;
     flex-direction: column;
@@ -89,32 +139,68 @@
 
   .change__wrapper {
     padding: 0 7px;
-    margin-bottom: 13px;
+    margin-bottom: 16px;
 
     width: 690px;
     height: 517px;
   }
 
-  .change__img {
-    display: block;
-  }
-
-  .change__img--after {
-    display: none;
-  }
-
   .change__button {
+    position: absolute;
+    top: -14px;
+    left: 0;
+    right: auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
     width: 34px;
     height: 34px;
 
+    outline: none;
     border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   }
 
+  .change__button:hover {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    transition: 200ms ease-out;
+  }
+
+  .change__button:active {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.25);
+    border: 2px solid $color-leaf;
+  }
+
+  .change--switched .change__button {
+    transform: translateX(400px);
+  }
+
   .change__button-bar {
+    position: relative;
+    margin: 0 23px;
+
+    width: 426px;
+    height: 6px;
+
+    border-radius: 2.5px;
+    background-color: $color-grey6;
+  }
+
+  .change__label {
+    font-size: 20px;
+  }
+
+  .change__label::after {
+    display: block;
+  }
+
+  .change .change__button::after {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: translate(0);
     width: 8px;
     height: 8px;
   }
@@ -122,6 +208,15 @@
 
 @media (min-width: $desktop-width) {
   .change {
+    padding-bottom: 51px;
     background: none;
+  }
+
+  .change__switch {
+    margin-left: 57px;
+  }
+
+  .change__wrapper {
+    margin-bottom: 39px;
   }
 }
