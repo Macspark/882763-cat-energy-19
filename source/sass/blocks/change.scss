@@ -172,7 +172,7 @@
   .change__button:active {
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.25);
     border: 2px solid $color-leaf;
-    transition: none;
+    transition-duration: 200ms;
   }
 
   .change--switched .change__button {
