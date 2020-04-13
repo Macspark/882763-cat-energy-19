@@ -92,15 +92,17 @@
     right: 0;
 
     width: 100%;
-
-    z-index: 1;
   }
 
   .contact__info {
+    position: relative;
+
     padding-left: 75px;
     padding-right: 65px;
     width: 570px;
     background-color: $color-white1;
+
+    z-index: 1;
   }
 
   .contact__text {
