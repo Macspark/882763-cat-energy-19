@@ -121,6 +121,7 @@
 
     &:last-child {
       border: none;
+      margin-right: 0;
     }
   }
 
@@ -142,10 +143,6 @@
     height: 2px;
 
     background-color: $color-leaf;
-  }
-
-  .main-nav__item:last-child {
-    margin-right: 0;
   }
 }
 
