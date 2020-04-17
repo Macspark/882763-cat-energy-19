@@ -13,12 +13,50 @@
   border: none;
   font-size: 0;
 
-  background: url("../img/icon-mobile-menu.svg") 50% 50%;
+  background: none;
 
   z-index: 3;
 
   &:hover {
     cursor: pointer;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    content: "";
+
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+
+    box-shadow: 0 8px 0 0 #000, 0 16px 0 0 #000;
+  }
+}
+
+.main-nav--toggled .main-nav__toggle {
+  &::before {
+    top: 8px;
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    display: block;
+    content: "";
+
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+
+    transform: rotate(-45deg);
   }
 }
 
@@ -38,10 +76,6 @@
 
   transition: transform 0.5s ease;
   z-index: 2;
-}
-
-.main-nav--toggled .main-nav__toggle {
-  background: url("../img/icon-close.svg") 50% 50% no-repeat;
 }
 
 .main-nav--toggled .main-nav__list {
