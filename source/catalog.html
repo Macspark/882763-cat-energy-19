@@ -3,10 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="page-header">
       <div class="page-header__wrapper">
 
@@ -321,7 +325,7 @@
             <div class="bonus__wrapper">
               <div class="bonus__img">
                 <svg width="56" height="61" x="0px" y="0px" viewBox="0 0 55.5 60">
-                  <use xlink:href="./img/sprite.svg#icon-gift">
+                  <use xlink:href="#icon-gift" />
                 </svg>
               </div>
               <p class="bonus__offer">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
@@ -354,30 +358,28 @@
       <div class="page-footer__wrapper">
 
         <a href="index.html" class="page-footer__logo">
-          <svg width="128" height="24">
-            <use xlink:href="./img/sprite.svg#logo-footer">
-          </svg>
+          <img src="./img/logo-footer.svg" width="128" height="24">
         </a>
 
         <ul class="page-footer__social social">
           <li class="social__item">
             <a href="https://vk.com" target="_blank" class="social__link social__link--vk">
               <svg width="22" height="12">
-                <use xlink:href="./img/sprite.svg#icon-vk">
+                <use xlink:href="#icon-vk" />
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a href="https://instagram.com" target="_blank" class="social__link social__link--insta">
               <svg width="17" height="17">
-                <use xlink:href="./img/sprite.svg#icon-insta">
+                <use xlink:href="#icon-insta" />
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a href="https://facebook.com" target="_blank" class="social__link social__link--fb">
               <svg width="10" height="19">
-                <use xlink:href="./img/sprite.svg#icon-fb">
+                <use xlink:href="#icon-fb" />
               </svg>
             </a>
           </li>
@@ -385,8 +387,8 @@
 
         <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="page-footer__copyright copyright">
           <p class="copyright__text">HTML Academy</p>
-          <svg width="27" height="34">
-            <use xlink:href="./img/sprite.svg#htmlacademy-logo">
+          <svg width="27" height="34" viewBox="0 0 26.943 34.09">
+              <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/>
           </svg>
         </a>
 
