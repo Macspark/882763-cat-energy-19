@@ -235,7 +235,7 @@
 }
 
 .fieldset__checkbox:checked + .fieldset__label--checkbox::before {
-  background-image: url("../img/icon-tick.svg");
+  background-image: url("../img/sprite.svg#icon-tick");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 22px 17px;
@@ -432,10 +432,6 @@
   .fieldset__label--checkbox::before {
     width: 40px;
     height: 40px;
-  }
-
-  .fieldset__checkbox:checked + .fieldset__label--checkbox::before {
-    background-size: 21px 16px;
   }
 }
 
