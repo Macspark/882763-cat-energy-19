@@ -79,7 +79,7 @@
 }
 
 .main-nav--toggled .main-nav__list {
-  transform: translateY(calc(100% - 1px));
+  transform: translateY(100%);
 }
 
 .main-nav--nojs .main-nav__toggle {
@@ -92,8 +92,10 @@
 }
 
 .main-nav__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   display: flex;
-  align-items: center;
   justify-content: center;
   min-height: 65px;
   width: 100%;
