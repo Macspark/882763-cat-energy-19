@@ -202,13 +202,17 @@
   }
 
   .change .change__button::after {
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    transform: translate(0);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    margin: auto;
+
     width: 8px;
     height: 8px;
+
+    transform: translate(0);
   }
 }
 
