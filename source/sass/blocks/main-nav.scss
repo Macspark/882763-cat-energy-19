@@ -13,30 +13,73 @@
   border: none;
   font-size: 0;
 
-  background: url("../img/icon-mobile-menu.svg") 50% 50%;
+  background: none;
+
+  z-index: 3;
 
   &:hover {
     cursor: pointer;
   }
-}
 
-.main-nav__list {
-  padding: 0;
-  margin: 0;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  display: none;
+    display: block;
+    content: "";
 
-  text-transform: uppercase;
-  text-align: center;
-  list-style: none;
+    width: 25px;
+    height: 2px;
+    background-color: #000000;
+
+    box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+  }
 }
 
 .main-nav--toggled .main-nav__toggle {
-  background: url("../img/icon-close.svg") 50% 50% no-repeat;
+  &::before {
+    top: 8px;
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    display: block;
+    content: "";
+
+    width: 25px;
+    height: 2px;
+    background-color: #000000;
+
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 0;
+  margin: 0;
+
+  background-color: $color-white1;
+  text-transform: uppercase;
+  text-align: center;
+  list-style: none;
+
+  transition: transform 0.5s ease;
+  z-index: 2;
 }
 
 .main-nav--toggled .main-nav__list {
-  display: block;
+  transform: translateY(100%);
 }
 
 .main-nav--nojs .main-nav__toggle {
@@ -44,17 +87,28 @@
 }
 
 .main-nav--nojs .main-nav__list {
-  display: block;
+  position: static;
+  transform: translateY(0);
 }
 
 .main-nav__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   display: flex;
-  align-items: center;
   justify-content: center;
   min-height: 65px;
   width: 100%;
 
   border-top: 1px solid $color-grey1;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $color-grey1;
+  }
 }
 
 .main-nav__link {
@@ -79,8 +133,14 @@
   }
 
   .main-nav .main-nav__list {
+    position: static;
+    transform: translateY(0);
+
     display: flex;
     flex-wrap: wrap;
+
+    background-color: transparent;
+    transition: none;
   }
 
   .main-nav__item {
@@ -90,6 +150,15 @@
     width: auto;
 
     border: none;
+
+    &:first-child {
+      border: none;
+    }
+
+    &:last-child {
+      border: none;
+      margin-right: 0;
+    }
   }
 
   .main-nav__link {
@@ -110,10 +179,6 @@
     height: 2px;
 
     background-color: $color-leaf;
-  }
-
-  .main-nav__item:last-child {
-    margin-right: 0;
   }
 }
 

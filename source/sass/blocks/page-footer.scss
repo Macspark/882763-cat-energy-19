@@ -30,11 +30,12 @@
   .page-footer__wrapper {
     padding-top: 22px;
     flex-direction: row;
+    align-items: stretch;
     justify-content: space-between;
   }
 
   .page-footer__logo {
-    padding-top: 16px;
+    padding-top: 36px;
   }
 
   .page-footer__logo img {

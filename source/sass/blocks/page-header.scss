@@ -1,6 +1,14 @@
 .page-header__wrapper {
   @include container-size;
+}
+
+.page-header__logo-wrapper {
+  position: relative;
+
+  background-color: $color-white1;
   border-bottom: 1px solid $color-grey1;
+
+  z-index: 3;
 }
 
 .page-header__logo {
@@ -33,6 +41,10 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  .page-header__logo-wrapper {
+    border: none;
   }
 
   .page-header__logo {

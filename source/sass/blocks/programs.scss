@@ -32,6 +32,10 @@
 
   display: block;
   content: "";
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .programs__item--slim::after {
@@ -40,7 +44,7 @@
 
   width: 35px;
   height: 49px;
-  background: url("../img/icon-cat-slim.svg") no-repeat;
+  background-image: url("../img/sprite.svg#icon-cat-slim");
 }
 
 .programs__item--pro::after {
@@ -48,7 +52,7 @@
   left: 13px;
   width: 67px;
   height: 28px;
-  background: url("../img/icon-cat-pro.svg") no-repeat;
+  background-image: url("../img/sprite.svg#icon-cat-pro");
 }
 
 .programs__title {
@@ -101,8 +105,9 @@
     content: "";
     width: 34px;
     height: 12px;
-    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-image: url("../img/sprite.svg#icon-right-arrow-verylong");
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: -10px center;
 
     transition: 200ms ease-out;
@@ -112,7 +117,7 @@
 .programs__button:hover::after,
 .programs__button:focus::after {
   width: 34px;
-  background-position: center;
+  background-position: 0 center;
 }
 
 .programs__button:active {

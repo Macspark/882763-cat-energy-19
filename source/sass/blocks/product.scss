@@ -56,8 +56,9 @@
 }
 
 .product__img img {
-  width: 100%;
+  width: 140px;
   height: auto;
+  object-fit: contain;
 }
 
 .product__button {
@@ -93,6 +94,10 @@
     flex-direction: column-reverse;
     width: 324px;
     height: 208px;
+  }
+
+  .product__img img {
+    width: 324px;
   }
 
   .product__title {
@@ -147,5 +152,9 @@
     margin-bottom: 35px;
     width: 245px;
     height: 208px;
+  }
+
+  .product__img img {
+    width: 245px;
   }
 }

@@ -13,6 +13,12 @@
     center 0 url("../img/index-background-mobile@1x.jpg") no-repeat,
     linear-gradient(to bottom, $color-leaf 305px, #ffffff 305px);
   background-size: 100% 305px, 100%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(to bottom, $color-leaf 305px, #ffffff 305px);
+  }
 }
 
 .promo__title {
@@ -37,6 +43,17 @@
 
 .promo__button {
   @include button;
+}
+
+.promo__img {
+  width: 280px;
+  height: 270px;
+}
+
+.promo__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @media (min-width: $tablet-width) {
@@ -69,15 +86,13 @@
 
   .promo__img {
     position: absolute;
-    left: 45px;
+    left: 30px;
     bottom: -24px;
 
-    z-index: -1;
-  }
-
-  .promo__img img {
     width: 709px;
     height: 609px;
+
+    z-index: -1;
   }
 
   .promo__button {
@@ -107,6 +122,10 @@
       background-size: cover;
 
       z-index: -1;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 
@@ -126,9 +145,7 @@
   .promo__img {
     left: 490px;
     top: 23px;
-  }
 
-  .promo__img img {
     width: 552px;
     height: 499px;
   }
