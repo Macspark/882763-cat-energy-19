@@ -27,23 +27,23 @@ gulp.task("images", function () {
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/icon-*.svg")
-  .pipe(svgsprite({
-        mode: {
-            stack: {
-                sprite: "../sprite.svg"
-                }
-           },
-       }
-   ))
-   .pipe(gulp.dest("build/img"));
+    .pipe(svgsprite({
+         mode: {
+             stack: {
+                 sprite: "../sprite.svg"
+                 }
+            },
+        }
+    ))
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-     .pipe(posthtml([
-       include()
-     ]))
-     .pipe(gulp.dest("build"));
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("css", function () {
