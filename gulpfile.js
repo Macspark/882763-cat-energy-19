@@ -30,12 +30,12 @@ gulp.task("sprite", function () {
   .pipe(svgsprite({
         mode: {
             stack: {
-                sprite: "../sprite.svg"  //sprite file name
-            }
-        },
-    }
-))
-    .pipe(gulp.dest("build/img"));
+                sprite: "../sprite.svg"
+                }
+           },
+       }
+   ))
+   .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("html", function () {
