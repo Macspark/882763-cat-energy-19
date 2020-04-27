@@ -112,10 +112,11 @@
       content: "";
       width: 50%;
       height: 696px;
-      background-color: $color-leaf;
+      background-color: $color-catbg;
       background-image: url("../img/index-background-desktop.png");
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
+      background-position: right;
 
       z-index: -1;
 
