@@ -14,39 +14,30 @@
 
 .change__img {
   position: absolute;
-  top: auto;
+  top: 0;
 
-  height: 100%;
+  display: flex;
+  overflow: hidden;
 
   transition: 500ms ease;
 }
 
 .change__img--before {
   left: 0;
-  right: auto;
-
   width: 100%;
-  background-image: url("../img/before-mobile@1x.png");
-  background-size: cover;
-  background-position: 0 center;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/before-mobile@2x.png");
-  }
 }
 
 .change__img--after {
-  left: auto;
   right: 0;
-
   width: 0;
-  background-image: url("../img/after-mobile@1x.png");
-  background-size: cover;
-  background-position: 100% center;
+  flex-direction: row-reverse;
+}
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/after-mobile@2x.png");
-  }
+.change__img img {
+  width: 320px;
+  height: auto;
+  max-width: initial;
+  max-height: initial;
 }
 
 .change__switch {
@@ -158,24 +149,18 @@
     transition: none;
   }
 
+  .change__img img {
+    width: 690px;
+  }
+
   .change .change__img--before {
     left: 8px;
     width: 49%;
-    background-image: url("../img/before-tablet@1x.png");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/before-tablet@2x.png");
-    }
   }
 
   .change .change__img--after {
     right: -8px;
     width: 51%;
-    background-image: url("../img/after-tablet@1x.png");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/after-tablet@2x.png");
-    }
   }
 
   .change__wrapper {
@@ -253,20 +238,10 @@
 
   .change .change__img--before {
     width: 53%;
-    background-image: url("../img/before-desktop@1x.png");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/before-desktop@2x.png");
-    }
   }
 
   .change .change__img--after {
     width: 47%;
-    background-image: url("../img/after-desktop@1x.png");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/after-desktop@2x.png");
-    }
   }
 
   .change__switch {
