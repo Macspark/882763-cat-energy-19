@@ -10,7 +10,9 @@
   .example {
     margin-top: -66px;
     margin-bottom: 0;
-    background: linear-gradient(to top, $color-background 462px, $color-white1 462px);
+    background:
+      linear-gradient(to top, transparent 460px, $color-white1 460px),
+      linear-gradient(to left, $color-background-darker 50%, $color-background 50%);
   }
 
   .example__wrapper {
@@ -27,12 +29,17 @@
 @media (min-width: $desktop-width) {
   .example {
     margin-top: -102px;
-    padding-bottom: 19px;
-    background: linear-gradient(to bottom, $color-white1 210px, $color-background 210px);
+    background:
+      linear-gradient(to bottom, $color-white1 210px, transparent 210px),
+      linear-gradient(to left, $color-background-darker 50%, $color-background 50%);
   }
 
   .example__wrapper {
+    padding-bottom: 19px;
     display: flex;
     border: none;
+    background:
+      linear-gradient(to bottom, $color-white1 210px, transparent 210px),
+      linear-gradient(to left, $color-background-darker 325px, $color-background 325px);
   }
 }

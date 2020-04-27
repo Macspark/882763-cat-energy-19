@@ -14,34 +14,31 @@
 
 .change__img {
   position: absolute;
-  left: 0;
-  right: auto;
   top: auto;
 
-  width: 100%;
   height: 100%;
 
   transition: 500ms ease;
-
-  &--after {
-    left: auto;
-    right: 0;
-    width: 0;
-  }
 }
 
-.change__img img {
+.change__img--before {
+  left: 0;
+  right: auto;
+
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background-image: url("../img/before-tablet@1x.png");
+  background-size: cover;
+  background-position: 0 center;
 }
 
-.change__img--before img {
-  object-position: 0 center;
-}
+.change__img--after {
+  left: auto;
+  right: 0;
 
-.change__img--after img {
-  object-position: 100% center;
+  width: 0;
+  background-image: url("../img/after-tablet@1x.png");
+  background-size: cover;
+  background-position: 100% center;
 }
 
 .change__switch {
@@ -151,16 +148,18 @@
 
   .change .change__img {
     transition: none;
+  }
 
-    &--before {
-      left: 8px;
-      width: 49%;
-    }
+  .change .change__img--before {
+    left: 8px;
+    width: 49%;
+    background-image: url("../img/before-tablet@1x.png");
+  }
 
-    &--after {
-      right: -8px;
-      width: 51%;
-    }
+  .change .change__img--after {
+    right: -8px;
+    width: 51%;
+    background-image: url("../img/after-tablet@1x.png");
   }
 
   .change__wrapper {
@@ -185,10 +184,6 @@
     outline: none;
     border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-  }
-
-  .change .change__button::after {
-    transform: translateX(0);
   }
 
   .change__button:hover {
@@ -227,6 +222,7 @@
     bottom: 0;
 
     margin: auto;
+    transform: translateX(0);
 
     width: 8px;
     height: 8px;
@@ -239,14 +235,14 @@
     background: none;
   }
 
-  .change .change__img {
-    &--before {
-      width: 53%;
-    }
+  .change .change__img--before {
+    width: 53%;
+    background-image: url("../img/before-desktop@1x.png");
+  }
 
-    &--after {
-      width: 47%;
-    }
+  .change .change__img--after {
+    width: 47%;
+    background-image: url("../img/after-desktop@1x.png");
   }
 
   .change__switch {

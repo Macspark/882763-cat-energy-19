@@ -35,10 +35,10 @@ gulp.task("webp", function () {
 gulp.task("sprite", function () {
   return gulp.src("source/img/icon-*.svg")
     .pipe(svgsprite({
-         mode: {
-             stack: {
-                 sprite: "../sprite.svg"
-                 }
+          mode: {
+              stack: {
+                  sprite: "../sprite.svg"
+                  }
             },
         }
     ))
