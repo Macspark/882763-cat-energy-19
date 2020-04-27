@@ -14,17 +14,19 @@
 
 .change__img {
   position: absolute;
-  left: auto;
+  left: 0;
+  right: auto;
   top: auto;
 
-  transform: scale(0);
   width: 100%;
   height: 100%;
-  transition: 0.5s ease 0s;
 
-  &--before {
-    transform: scale(1);
-    transition: 0.5s ease 0.5s;
+  transition: 500ms ease;
+
+  &--after {
+    left: auto;
+    right: 0;
+    width: 0;
   }
 }
 
@@ -32,6 +34,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.change__img--before img {
+  object-position: 0 center;
+}
+
+.change__img--after img {
+  object-position: 100% center;
 }
 
 .change__switch {
@@ -94,7 +104,6 @@
   color: $color-black1;
 
   cursor: pointer;
-  transition: 500ms ease;
 }
 
 .change__button-bar {
@@ -119,13 +128,11 @@
 
 .change--switched .change__img {
   &--before {
-    transform: scale(0);
-    transition: 0.5s ease 0s;
+    width: 0;
   }
 
   &--after {
-    transform: scale(1);
-    transition: 0.5s ease 0.5s;
+    width: 100%;
   }
 }
 
@@ -142,6 +149,20 @@
     align-items: center;
   }
 
+  .change .change__img {
+    transition: none;
+
+    &--before {
+      left: 8px;
+      width: 49%;
+    }
+
+    &--after {
+      right: -8px;
+      width: 51%;
+    }
+  }
+
   .change__wrapper {
     padding: 0 7px;
     margin-bottom: 16px;
@@ -153,8 +174,7 @@
   .change__button {
     position: absolute;
     top: -14px;
-    left: 0;
-    right: auto;
+    left: 198px;
 
     display: flex;
     align-items: center;
@@ -162,24 +182,23 @@
     width: 34px;
     height: 34px;
 
-    transition: 1s ease;
     outline: none;
     border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   }
 
+  .change .change__button::after {
+    transform: translateX(0);
+  }
+
   .change__button:hover {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    transition: 200ms ease;
   }
 
   .change__button:active {
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.25);
     border: 2px solid $color-leaf;
-    transition-duration: 200ms;
-  }
-
-  .change--switched .change__button {
-    transform: translateX(400px);
   }
 
   .change__button-bar {
@@ -211,8 +230,6 @@
 
     width: 8px;
     height: 8px;
-
-    transform: translate(0);
   }
 }
 
@@ -220,6 +237,16 @@
   .change {
     padding-bottom: 51px;
     background: none;
+  }
+
+  .change .change__img {
+    &--before {
+      width: 53%;
+    }
+
+    &--after {
+      width: 47%;
+    }
   }
 
   .change__switch {

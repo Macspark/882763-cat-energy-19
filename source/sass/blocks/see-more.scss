@@ -53,9 +53,18 @@
 }
 
 .see-more__button {
-  @include grey-button;
   font-size: 16px;
   line-height: 1.25;
+  background-color: $color-background;
+  color: $color-grey2;
+
+  &:hover {
+    background-color: $color-grey4;
+  }
+
+  &:active {
+    color: $color-grey2-30;
+  }
 }
 
 @media (min-width: $tablet-width) {

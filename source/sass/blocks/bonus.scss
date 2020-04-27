@@ -1,9 +1,9 @@
 .bonus {
   margin: 0 auto;
 
-  height: 289px;
+  min-height: 289px;
 
-  background-color: $color-leaf;
+  background-color: $color-catbg;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-size: 100% 100%;
 
@@ -42,7 +42,7 @@
     display: flex;
     justify-content: center;
 
-    height: 200px;
+    min-height: 200px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -72,7 +72,7 @@
 @media (min-width: $desktop-width) {
   .bonus {
     width: 245px;
-    height: 289px;
+    min-height: 289px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

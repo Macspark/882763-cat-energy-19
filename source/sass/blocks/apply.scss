@@ -31,7 +31,6 @@
 }
 
 .apply__button {
-  @include button;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 22px;
@@ -119,7 +118,7 @@
     margin-bottom: 30px;
 
     &--longermargin {
-      margin-bottom: 50px;
+      margin-bottom: 35px;
     }
   }
 

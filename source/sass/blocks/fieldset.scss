@@ -76,7 +76,7 @@
     border: 2px solid $color-grey2;
   }
 
-  &:not(:placeholder-shown):not(:focus):invalid {
+  &:focus:invalid {
     padding-left: 14px;
     border: 2px solid $color-red;
   }
@@ -464,10 +464,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .fieldset__list--contact .fieldset__item {
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 
   .fieldset__textarea {
