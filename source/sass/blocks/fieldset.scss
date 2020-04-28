@@ -164,11 +164,6 @@
   right: 13px;
 }
 
-.fieldset__radio,
-.fieldset__checkbox {
-  display: none;
-}
-
 .fieldset__label {
   position: relative;
 
@@ -248,7 +243,9 @@
 }
 
 .fieldset__label--radio:active,
-.fieldset__label--checkbox:active {
+.fieldset__label--checkbox:active,
+.fieldset__radio:focus + .fieldset__label--radio,
+.fieldset__checkbox:focus + .fieldset__label--checkbox {
   opacity: 0.3;
   transition: 200ms ease-out;
 }
